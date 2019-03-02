@@ -31,8 +31,12 @@
 
 ## Definitely goes
 
-### Debugging with git bisect
-* Description
+### Find bugs with git-bisect
+
+While you were on vacation someone created a bug. Instead of "Hello World!" the main page shows "¡Hola, mundo!".
+
+
+### Git archaeology
 
 
 
