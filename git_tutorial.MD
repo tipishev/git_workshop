@@ -53,6 +53,11 @@ The script should return:
 * 1 for bad
 * 125 for cannot test
 
+```
+git bisect bad
+git bisect good 41ff7
+git bisect run ./bisect_test_.sh
+```
 
 
 Notes:
