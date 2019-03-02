@@ -46,6 +46,14 @@ cat bisect/index.html  # has World
 git bisect good
 ```
 
+Let's automate the search. Enter `git bisect run my_script arguments`
+The script should return:
+
+* 0 for good
+* 1 for bad
+* 125 for cannot test
+
+
 
 Notes:
 * As an alternative, you can use `new` instead of `bad` and `old` instead of good
@@ -53,6 +61,8 @@ Notes:
   - `git reset --hard HEAD~3`  # try 3 commits ago
   - `git bisect skip`  # current commit
   - `git bisect skip v2.5..v2.6`  # skip a range of commits
+* Narrow down to directories
+* Give more than one good commit
 
 
 ### Git archaeology
