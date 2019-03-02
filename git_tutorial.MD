@@ -35,13 +35,24 @@
 
 While you were on vacation someone created a bug. Instead of "Hello World!" the main page shows "¡Hola, mundo!".
 
+Like with many things in Git, you only need a few subcommands to work. Here they are `start`, `bad`, and `good`.
+
 ```bash
 git-bisect start
 cat bisect/index.html  # has mundo
+git bisect bad
 git checkout 41ff7
 cat bisect/index.html  # has World
 git bisect good
 ```
+
+
+Notes:
+* As an alternative, you can use `new` instead of `bad` and `old` instead of good
+* In real world not every commit can be tested, e.g. build fails. You have Options
+  - `git reset --hard HEAD~3`  # try 3 commits ago
+  - `git bisect skip`  # current commit
+  - `git bisect skip v2.5..v2.6`  # skip a range of commits
 
 
 ### Git archaeology
