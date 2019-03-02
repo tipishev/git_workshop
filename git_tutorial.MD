@@ -35,6 +35,14 @@
 
 While you were on vacation someone created a bug. Instead of "Hello World!" the main page shows "¡Hola, mundo!".
 
+```bash
+git-bisect start
+cat bisect/index.html  # has mundo
+git checkout 41ff7
+cat bisect/index.html  # has World
+git bisect good
+```
+
 
 ### Git archaeology
 
