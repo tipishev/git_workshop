@@ -60,7 +60,7 @@ git bisect run ./bisect_test_.sh
 ```
 
 
-Notes:
+Notes from documentation:
 * As an alternative, you can use `new` instead of `bad` and `old` instead of good
 * In real world not every commit can be tested, e.g. build fails. You have Options
   - `git reset --hard HEAD~3`  # try 3 commits ago
@@ -68,6 +68,7 @@ Notes:
   - `git bisect skip v2.5..v2.6`  # skip a range of commits
 * Narrow down to directories
 * Give more than one good commit
+* Automatically bisect a broken test
 
 
 ### Git archaeology
