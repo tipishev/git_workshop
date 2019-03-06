@@ -2,4 +2,5 @@
 
 import sys
 
+print('wololo')
 print(sys.argv)
