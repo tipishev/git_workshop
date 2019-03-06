@@ -1,6 +1,7 @@
 ## Ideas pool
 
 * squash
+* time-based revision references  `git diff HEAD@{'2 months ago'}`
 * ancestry path
 * git lg
 * git log --stat
@@ -28,6 +29,15 @@
 * delete all merged branches
 * git log --pretty=oneline master
 * https://devhints.io/git-log-format git log --pretty=format:"%ad - %an: %s %H" --after="2019-02-25" --until="2019-02-27"
+* garbage collect, GIT_TRACE_PERFORMANCE
+* nuke accidental password
+
+* https://opensource.com/article/18/4/git-tips
+  - 6. A nicer force-push: `git push --force-with-lease`
+
+
+* stash
+  - git config --global alias.stash-rename '!_() { rev=$(git rev-parse $1) && git stash drop $1 || exit 1 ; git stash store -m "$2" $rev; }; _'
 
 ## Definitely goes
 
@@ -59,7 +69,6 @@ git bisect good 41ff7
 git bisect run ./bisect_test_.sh
 ```
 
-
 Notes from documentation:
 * As an alternative, you can use `new` instead of `bad` and `old` instead of good
 * In real world not every commit can be tested, e.g. build fails. You have Options
@@ -72,6 +81,11 @@ Notes from documentation:
 
 
 ### Git archaeology
+
+
+### Git Hooks
+
+
 
 
 
