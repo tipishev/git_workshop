@@ -84,7 +84,7 @@ Notes from documentation:
 
 
 ### Git Hooks
-Many of us use TODO and FIXME throughout the code. I allow TODO in production, but not FIXME.
+Many of us use TODO and FIXME throughout the code. I allow TODO in production, but not FIXME. To enforce this rule one can use hooks.
 
 
 

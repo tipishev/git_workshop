@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+
+import subprocess
+
+changed_filenames = subprocess.check_output(
+        ['git', 'diff-index', '--cached', '--name-only', 'HEAD']).split()
+for filename in changed_filenames:
+    with open(filename) as f:
+        for line_number, line in enumerate(f.readlines(), start=1):
+            if 'FIXME' in line:
+                raise ValueError(f"{filename}:{line_number}: {line}\nFix it, wouldn't ya?")
