@@ -84,8 +84,7 @@ Notes from documentation:
 
 
 ### Git Hooks
-
-
+Do any of you use TODO/FIXME in your code?
 
 
 
