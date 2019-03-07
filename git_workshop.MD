@@ -81,10 +81,19 @@ Notes from documentation:
 
 
 ### Git archaeology
-
+Often when reading code one can wonder who wrote this and what were they smoking. Luckily for us, Git records all the history and we can do some Git archaeology to figure out why is the code the way it is. The first tool you would use is `git blame`. It shows the commit, author, and date for every line of code. However, sometimes it's not enough. We may inspect a commit with `git show {commit hash}` to see that the poor person we were cursing for the last 10 minutes just refactored the code.
 
 ### Git Hooks
-Many of us use TODO and FIXME throughout the code. I allow TODO in production, but not FIXME. To enforce this rule one can use hooks.
+In almost any collaborative coding project there are rules. These rules can be about code style, commit message format, who can edit which files and so on. Many of these rules are so simple that a robot can do it. And it should. That's where Git hooks step in. There are 2 types of hooks:
+
+* Server Side
+* Client Side
+
+
+Can be bypassed with `--no-verify`
+
+
+
 
 
 
