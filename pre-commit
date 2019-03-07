@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import sys
 import subprocess
 
 changed_filenames = subprocess.check_output(
@@ -8,4 +9,6 @@ for filename in changed_filenames:
     with open(filename) as f:
         for line_number, line in enumerate(f.readlines(), start=1):
             if 'FIXME' in line:
-                raise ValueError(f"{filename}:{line_number}: {line}\nFix it, wouldn't ya?")
+                print(f"{filename}:{line_number}: {line}\n"
+                       "Fix it, wouldn't ya?")
+                sys.exit(1)
