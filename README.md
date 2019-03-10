@@ -181,6 +181,14 @@ As one wiseman said "Some languages can be read by human, but not by machines, w
 File `binary/ugly.xml` is a huge line of generated XML. When a single letter changes the diff shows the whole file. Good luck figuring out what has changed. Of course, we could prettify it and try to see the difference, but there is another way. We can tell Git to treat it as binary and not to bother showing the diff.
 
 ### When binary should be treated as text
+Install Pandoc
+
+```
+git config diff.word.textconv "pandoc -t markdown -s"
+git diff
+```
+
+And voila! The project notes start looking like markdown in git diff.
 
 
 ### Git archaeology

@@ -1,1 +1,2 @@
-ugly.xml binary
+*.xml binary
+*.docx diff=word
