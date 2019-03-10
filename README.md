@@ -166,9 +166,19 @@ Notes from documentation:
 
 ![Binary Deception](images/deception.png)
 
-Git is very good at tracking changes in plaintext files. Some text files, however, are better to be treated as binary, for example auto-generated XML files. Also, some binary files 
+Git is very good at tracking changes in plaintext files. For binary files it honestly tells:
+
+```
+diff --git a/binary/notes.docx b/binary/notes.docx
+index 638f1d4..9934c87 100644
+Binary files a/binary/notes.docx and b/binary/notes.docx differ
+```
+
+The real world is not as black and white as git thinks by default.  Some text files, are better to be treated as binary, for example auto-generated XML configuration. And some binaries are actually just text trapped inside a body of proprietory format, like Microsoft Word or Excel. Let's look at both scenarios.
 
 ### When text should be treated as binary
+As one wiseman said "Some languages can be read by human, but not by machines, while others can be read by machines but not by humans. XML solves this problem by being readable to neither."
+File `binary/ugly.xml` is a huge line of generated XML. When a single letter changes the diff shows the whole file. Good luck figuring out what has changed. Of course, we could prettify it and try to see the difference, but there is another way. We can tell Git to treat it as binary and not to bother showing the diff.
 
 ### When binary should be treated as text
 
