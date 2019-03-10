@@ -3,7 +3,6 @@
 * squash
 * time-based revision references  `git diff HEAD@{'2 months ago'}`
 * ancestry path
-* git lg
 * git log --stat
 * git grep
 * git replace
@@ -39,7 +38,82 @@
 * stash
   - git config --global alias.stash-rename '!_() { rev=$(git rev-parse $1) && git stash drop $1 || exit 1 ; git stash store -m "$2" $rev; }; _'
 
-## Definitely goes
+
+## Introduction
+
+Hello and welcome to this workshop on less-known useful features of Git. Git is one tool that we as developers use each and every day, therefore it makes sense to become more efficient at using it. What I discovered, however that as with most advanced technologies, as soon as one learns the basics, the motivation to learn fades. The goal of this workshop is to explore less known features that can make working with Git more productive and fun.
+
+If you have ever talked version control to non-developers, you know how difficult it is to convince them to use version control instead of saving file copies with increasingly cryptic names.
+
+![Naive Version Control](images/naive_version_control.png)
+
+Even the basics of Git feel unnecessarily complicated, as if it were made by the creator of Linux or something. However after you learn the main commands, you are good to go.
+
+![Basic Gearshift](images/basic_gearshift.png)
+
+However if you want to see how deep the rabbit hole goes you can read the official Git bible, available for free at https://git-scm.com/book/
+
+![Pro Git](images/pro-git.png)
+
+This book covers almost all the useful features for both users and Git admins.
+
+![Advanced](images/advanced.png)
+
+
+However, if you want to be a happier person, you can instead look at project Legit, it wraps the common branch workflow into just 7 commands
+
+![Legit](images/legit.png)
+
+So let's get started!
+
+### Configuration
+
+The fastest and most rewarding trick is to configure your Git.
+
+All of the configuration is done with `git config` command and one of 3 flags:
+
+* `--system` for all users (`/etc/gitconfig`)
+* `--global` just for you (`/home/%username%/.gitconfig`)
+* `--local` just for project (`.../project/.git/config`)
+
+In real life, however, only the `--global` and `--local` configurationes are useful.
+
+#### Aliases
+
+One of the most time-saving configurations is aliases. If you find yourself typing or tab-completing the same command every day and it's longer than 3 keystrokes, aliases are there for you.
+
+Here are 3 examples of such aliases:
+
+```bash
+sudo git config --system alias.co checkout
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+git config --local alias.pod "pull origin dev"
+```
+
+* The first one allows any user on the host to type `git co` instead of `git checkout`
+
+_demonstrate_
+
+* The second command provides a colourful replacement for a rather verbose default output of `git log`
+
+_demonstrate_
+
+* The third command is specific to the sportamore project where all the branches pull changes from `origin dev`
+
+As expected, each alias is written to one of the three configuration files:
+
+```bash
+less /etc/gitconfig
+less ~/.gitconfig
+less ~/sportamore/sportamore/.git/config
+```
+
+### Git Autocorrect
+So, let's continue.
+
+![Autocorrect](images/autocorrect.png)
+
+If you are one of 
 
 ### Find bugs with git-bisect
 
@@ -80,6 +154,14 @@ Notes from documentation:
 * Automatically bisect a broken test
 
 
+### Binary files
+
+## When text should be treated as binary
+
+
+## When binary should be treated as text
+
+
 ### Git archaeology
 Often when reading code one can wonder who wrote this and what were they smoking. Luckily for us, Git records all the history and we can do some Git archaeology to figure out why is the code the way it is. The first tool you would use is `git blame`. It shows the commit, author, and date for every line of code. However, sometimes it's not enough. We may inspect a commit with `git show {commit hash}` to see that the poor person we were cursing for the last 10 minutes just refactored the code.
 
@@ -91,9 +173,6 @@ In almost any collaborative coding project there are rules. These rules can be a
 
 
 Can be bypassed with `--no-verify`
-
-
-
 
 
 
