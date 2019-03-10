@@ -164,9 +164,7 @@ Notes from documentation:
 
 ### Binary files
 
-![Binary Deception](images/deception.png)
-
-Git is very good at tracking changes in plaintext files. For binary files it honestly tells:
+Git is good at tracking changes in text files and for binary files it simply tells:
 
 ```
 diff --git a/binary/notes.docx b/binary/notes.docx
@@ -174,21 +172,29 @@ index 638f1d4..9934c87 100644
 Binary files a/binary/notes.docx and b/binary/notes.docx differ
 ```
 
-The real world is not as black and white as git thinks by default.  Some text files, are better to be treated as binary, for example auto-generated XML configuration. And some binaries are actually just text trapped inside a body of proprietory format, like Microsoft Word or Excel. Let's look at both scenarios.
+So, for Git all files are either textual with nice diffs or binary blobs that cannot be diffed.
+
+![Binary Deception](images/deception.png)
+
+The real world, as usual, is not black and white. Some text files, are better to be treated as binary, for example auto-generated XML configuration. And some binaries are actually just text trapped inside a proprietory format, like Microsoft Word or Excel. Let's look at both scenarios.
 
 ### When text should be treated as binary
 As one wiseman said "Some languages can be read by human, but not by machines, while others can be read by machines but not by humans. XML solves this problem by being readable to neither."
 File `binary/ugly.xml` is a huge line of generated XML. When a single letter changes the diff shows the whole file. Good luck figuring out what has changed. Of course, we could prettify it and try to see the difference, but there is another way. We can tell Git to treat it as binary and not to bother showing the diff.
 
 ### When binary should be treated as text
-Install Pandoc
 
 ```
+sudo apt install pandoc
 git config diff.word.textconv "pandoc -t markdown -s"
 git diff
 ```
 
-And voila! The project notes start looking like markdown in git diff.
+And voilà! The Word document diff shows as markdown. The same idea can be applied to many more binary formats if you have a way to turn it into meaningful text. A smart enoufh neural network could show the following diff:
+```
+--- A WW2 sailor is kissing a woman on Time Square
++++ 11 men are having lunch on a girder over 1930s Manhattan
+```
 
 
 ### Git archaeology
