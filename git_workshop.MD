@@ -109,11 +109,36 @@ less ~/sportamore/sportamore/.git/config
 ```
 
 ### Git Autocorrect
-So, let's continue.
 
 ![Autocorrect](images/autocorrect.png)
 
-If you are one of 
+```bash
+# reset to no autocorrect
+git config --global help.autocorrect 0
+```
+
+One thing that I like about Git is that it offers suggestions when it cannot understand a command.
+
+```
+git heckout
+```
+
+You can take it one step further and allow Git to automatically correct you if there is only one similar command
+
+```bash
+git config --global help.autocorrect 30
+```
+
+30 in this command means that you have 3 seconds to either cancel the autocorrected command or think why are your fingers so fat and clumsy.
+
+So let's see how it works
+
+```bash
+git heckout
+```
+
+Notice that `git sta` is not autocorrected because it is ambiguous.
+
 
 ### Find bugs with git-bisect
 
