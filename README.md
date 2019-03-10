@@ -1,45 +1,4 @@
-## Ideas pool
-
-* squash
-* time-based revision references  `git diff HEAD@{'2 months ago'}`
-* ancestry path
-* git log --stat
-* git grep
-* git replace
-* git log -S
-* git blame + keys
-* git hooks
-* github tricks, e.g. #FIX %issue #% in PR name
-* git checkout/merge -
-* git commit/checkout -p
-* git short diff
-* git shortcuts
-* rebase
-* reflog plumbing
-* templates + template dir
-* git show
-* commits path shortcuts ..., ^, HEAD
-* split refactoring and feature branches
-* nuke big files
-* git tags
-* ignore whitespace
-* git stash
-* delete branch locally and remotely
-* delete all merged branches
-* git log --pretty=oneline master
-* https://devhints.io/git-log-format git log --pretty=format:"%ad - %an: %s %H" --after="2019-02-25" --until="2019-02-27"
-* garbage collect, GIT_TRACE_PERFORMANCE
-* nuke accidental password
-
-* https://opensource.com/article/18/4/git-tips
-  - 6. A nicer force-push: `git push --force-with-lease`
-
-
-* stash
-  - git config --global alias.stash-rename '!_() { rev=$(git rev-parse $1) && git stash drop $1 || exit 1 ; git stash store -m "$2" $rev; }; _'
-
-
-## Introduction
+# Introduction
 
 Hello and welcome to this workshop on less-known useful features of Git. Git is one tool that we as developers use each and every day, therefore it makes sense to become more efficient at using it. What I discovered, however that as with most advanced technologies, as soon as one learns the basics, the motivation to learn fades. The goal of this workshop is to explore less known features that can make working with Git more productive and fun.
 
@@ -66,7 +25,7 @@ However, if you want to be a happier person, you can instead look at project Leg
 
 So let's get started!
 
-### Configuration
+## Configuration
 
 The fastest and most rewarding trick is to configure your Git.
 
@@ -78,7 +37,7 @@ All of the configuration is done with `git config` command and one of 3 flags:
 
 In real life, however, only the `--global` and `--local` configurationes are useful.
 
-#### Aliases
+### Aliases
 
 One of the most time-saving configurations is aliases. If you find yourself typing or tab-completing the same command every day and it's longer than 3 keystrokes, aliases are there for you.
 
@@ -98,7 +57,7 @@ _demonstrate_
 
 _demonstrate_
 
-* The third command is specific to the sportamore project where all the branches pull changes from `origin dev`
+* The third command is specific to the Sportamore project where all the branches pull changes from `origin dev`
 
 As expected, each alias is written to one of the three configuration files:
 
@@ -108,7 +67,16 @@ less ~/.gitconfig
 less ~/sportamore/sportamore/.git/config
 ```
 
-### Git Autocorrect
+### Aside: Sexy Bash Prompt
+
+If you use `git status` too often, you may want to look at [Sexy Bash Prompt](https://github.com/twolfson/sexy-bash-prompt)
+
+![Autocorrect](images/sexy-bash-prompt.png)
+
+It shows the currently checked out branch and an icon for unpushed/unpulled/uncommited changes.
+
+
+### Autocorrect
 
 ![Autocorrect](images/autocorrect.png)
 
@@ -129,7 +97,10 @@ You can take it one step further and allow Git to automatically correct you if t
 git config --global help.autocorrect 30
 ```
 
-30 in this command means that you have 3 seconds to either cancel the autocorrected command or think why are your fingers so fat and clumsy.
+30 in this command means that you have 3 seconds to
+
+* think why are your fingers so fat and clumsy
+* cancel the autocorrected command
 
 So let's see how it works
 
@@ -139,12 +110,24 @@ git heckout
 
 Notice that `git sta` is not autocorrected because it is ambiguous.
 
+### Colors
+
+This configuration tip is usefule you work a lot in the command line mode. Any colored output in Git can be configured, for example:
+
+```
+git config --global color.diff.new "green normal reverse"
+```
+
 
 ### Find bugs with git-bisect
 
 While you were on vacation someone created a bug. Instead of "Hello World!" the main page shows "¡Hola, mundo!".
 
-Like with many things in Git, you only need a few subcommands to work. Here they are `start`, `bad`, and `good`.
+Like with many things in Git, you only need a few subcommands to work.  They are
+
+* `start`
+* `bad`
+* `good`
 
 ```bash
 git-bisect start
@@ -181,10 +164,9 @@ Notes from documentation:
 
 ### Binary files
 
-## When text should be treated as binary
+### When text should be treated as binary
 
-
-## When binary should be treated as text
+### When binary should be treated as text
 
 
 ### Git archaeology
@@ -199,7 +181,50 @@ In almost any collaborative coding project there are rules. These rules can be a
 
 Can be bypassed with `--no-verify`
 
+---
+
+# Illustrations
+* https://xkcd.com/1597/ use for introduction?
+
+---
+
+# Ideas pool
+
+* squash
+* time-based revision references  `git diff HEAD@{'2 months ago'}`
+* ancestry path
+* git log --stat
+* git grep
+* git replace
+* git log -S
+* git blame + keys
+* git hooks
+* github tricks, e.g. #FIX %issue #% in PR name
+* git checkout/merge -
+* git commit/checkout -p
+* git short diff
+* rebase
+* reflog plumbing
+* templates + template dir
+* git show
+* commits path shortcuts ..., ^, HEAD
+* split refactoring and feature branches
+* nuke big files
+* git tags
+* ignore whitespace
+* git stash
+* delete branch locally and remotely
+* delete all merged branches
+* git log --pretty=oneline master
+* https://devhints.io/git-log-format git log --pretty=format:"%ad - %an: %s %H" --after="2019-02-25" --until="2019-02-27"
+* garbage collect, GIT_TRACE_PERFORMANCE
+* nuke accidental password
+
+* https://opensource.com/article/18/4/git-tips
+  - 6. A nicer force-push: `git push --force-with-lease`
 
 
-## Illustrations
-* https://xkcd.com/1597/ use for introduction
+* stash
+  - git config --global alias.stash-rename '!_() { rev=$(git rev-parse $1) && git stash drop $1 || exit 1 ; git stash store -m "$2" $rev; }; _'
+
+
