@@ -164,6 +164,10 @@ Notes from documentation:
 
 ### Binary files
 
+![Binary Deception](images/deception.png)
+
+Git is very good at tracking changes in plaintext files. Some text files, however, are better to be treated as binary, for example auto-generated XML files. Also, some binary files 
+
 ### When text should be treated as binary
 
 ### When binary should be treated as text
