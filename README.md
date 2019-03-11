@@ -197,15 +197,31 @@ And voilà! The Word document diff shows as markdown. The same idea can be appli
 ```
 
 
-### Git archaeology
+### Git Archaeology
 
-Often when reading code one can wonder who wrote this and what were they smoking. Luckily for us, Git records all the history and we can do some Git archaeology to figure out why is the code the way it is.
+https://jfire.io/blog/2012/03/07/code-archaeology-with-git/
+
+Often when reading code one can wonder who wrote this and what were they ~~smoking~~ thinking. Luckily, Git records a lot of history and we can do some archaeology to figure out why is the code the way it is. Let's see what is in our archeology toolbox.
 
 #### Git blame
-The first tool in our arsenal is `git blame`. It shows the commit, author, and date for every line of code. However, sometimes it's not enough. We may inspect a commit with `git show {commit hash}` to see that the poor person we were cursing for the last 10 minutes just refactored the code.
+
+The first tool is `git blame`. It shows the commit, author, and date for every line of code in a given file. As soon as we see the commit hash next to the line, we inspect this commit with
+
+```
+git show {commit hash}  # TODO use actual example
+```
+
+This way we see what was the intent of this commit and what else had changed at the same time.
+
+- separate refactoring commits
+- alibi
+
+#### Git show
 
 ### Git Hooks
 In almost any collaborative coding project there are rules. These rules can be about code style, commit message format, who can edit which files and so on. Many of these rules are so simple that a robot can do it. And it should. That's where Git hooks step in. There are 2 types of hooks:
+
+TODO diagram
 
 * Server Side
 * Client Side
