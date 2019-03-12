@@ -196,6 +196,21 @@ And voilà! The Word document diff shows as markdown. The same idea can be appli
 +++ 11 men are having lunch on a girder over 1930s Manhattan
 ```
 
+### Interactive Git
+Many git commands are presented as all-or-nothing: you either commit the whole file or don't commit at all. Git is not like this, many of its commands have interactive mode, where git and you take turns in doing something.
+
+#### Patch-flag
+Let's say that a file you were working has more than one logical change, for example refactoring and the actual feature.
+
+```
+git diff
+```
+
+What we would like to do is put refactoring chages in one commit and the feature in the other.
+
+
+#### Interactive Rebasing Exercise
+
 
 ### Git Archaeology
 
@@ -256,6 +271,7 @@ Can be bypassed with `--no-verify`
 * git show
 * commits path shortcuts ..., ^, HEAD
 * split refactoring and feature branches
+  - drive-by refactoring
 * nuke big files
 * git tags
 * ignore whitespace
