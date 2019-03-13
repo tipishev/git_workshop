@@ -209,6 +209,11 @@ git diff
 What we would like to do is put refactoring chages in one commit and the feature in the other.
 
 
+### Correcting Mistakes
+
+* http://sethrobertson.github.io/GitFixUm/fixup.html
+
+
 #### Interactive Rebasing Exercise
 
 
@@ -243,12 +248,28 @@ TODO diagram
 
 Can be bypassed with `--no-verify`
 
+
+## Conclusion
+
+Pro Git in Russian
+
+* https://git-scm.com/book/ru/v2
+* Git tips and tricks
+
 ---
 
 # Illustrations
+
 * https://xkcd.com/1597/ use for introduction?
 
 ---
+
+# Reading list
+
+* http://sethrobertson.github.io/GitBestPractices/  # MUST READ
+* https://opensource.com/article/18/4/git-tips
+  - 6. A nicer force-push: `git push --force-with-lease`
+* short commands description in Pro Git appendix
 
 # Ideas pool
 
@@ -283,8 +304,6 @@ Can be bypassed with `--no-verify`
 * garbage collect, GIT_TRACE_PERFORMANCE
 * nuke accidental password
 
-* https://opensource.com/article/18/4/git-tips
-  - 6. A nicer force-push: `git push --force-with-lease`
 
 
 * stash
