@@ -36,8 +36,11 @@ clear
 
 cd ..
 pe "ls"
-pe "vim bisect_test.sh"
+pe "cp bisect_test.sh ~/Desktop/"
+pe "vim ~/Desktop/bisect_test.sh"
 pe "git bisect start"
 pe "git bisect bad"
 pe "git bisect good 41ff7"
-pe "git bisect run ./bisect_test.sh"
+pe "git bisect run ~/Desktop/bisect_test.sh"
+
+git bisect reset
