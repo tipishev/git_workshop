@@ -8,12 +8,14 @@ cd ..
 pe "cat bisect/index.html"
 pe "git status"
 pe "git show 41ff7"
-pe "git log 41ff7..HEAD --oneline"
+pe "git log 41ff7..b87963 --oneline"
 pe "git bisect start"
-pe "git bisect bad"
+pe "git bisect bad b87963"
 pe "git bisect good 41ff7"
-pe "cat bisect/index.html"
+
 pe "git config --global alias.bs bisect"
+
+pe "cat bisect/index.html"
 cmd
 pe "cat bisect/index.html"
 cmd
