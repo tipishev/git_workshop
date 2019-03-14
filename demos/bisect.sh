@@ -18,9 +18,11 @@ pe "cat bisect/index.html"
 pe "git bisect bad"
 pe "cat bisect/index.html"
 pe "git bisect bad"
+
 git bisect reset
 
-p "${RED} git bisect reset"
+pe "git checkout master"
+p "${RED}git bisect reset"
 pe "ls"
 pe "cp bisect_test.sh ~/Desktop/"
 pe "vim ~/Desktop/bisect_test.sh"
