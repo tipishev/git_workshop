@@ -5,37 +5,19 @@ DEMO_PROMPT="${PURPLE}(${GREEEN}bi${WHITE}|${RED}sect)${GREEN}➜ "
 clear
 
 cd ..
+pe "git checkout e0246d5"
 pe "cat bisect/index.html"
-pe "git status"
-pe "git show 41ff7"
-pe "git log 41ff7..b87963 --oneline"
+pe "git show 180b09c -- bisect/index.html"
+pe "git log 180b09c..e0246d5 --oneline"
 pe "git bisect start"
-pe "git bisect bad b87963"
-pe "git bisect good 41ff7"
-
-pe "git config --global alias.bs bisect"
-
+pe "git bisect bad e0246d5"
+pe "git bisect good 180b09c"
 pe "cat bisect/index.html"
-cmd
+pe "git bisect good"
 pe "cat bisect/index.html"
-cmd
+pe "git bisect bad"
 pe "cat bisect/index.html"
-cmd
-pe "cat bisect/index.html"
-cmd
-pe "cat bisect/index.html"
-cmd
-pe "cat bisect/index.html"
-cmd
-pe "cat bisect/index.html"
-cmd
-pe "cat bisect/index.html"
-cmd
-pe "cat bisect/index.html"
-cmd
-pe "cat bisect/index.html"
-cmd
-pe "git show 1ce2"
+pe "git bisect bad"
 git bisect reset
 
 p "${RED} git bisect reset"
@@ -45,6 +27,8 @@ pe "vim ~/Desktop/bisect_test.sh"
 pe "git bisect start"
 pe "git bisect bad"
 pe "git bisect good 41ff7"
+pe "git log 180b09c..HEAD --oneline"
 pe "git bisect run ~/Desktop/bisect_test.sh"
 
 git bisect reset
+git checkout master
