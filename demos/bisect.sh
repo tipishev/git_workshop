@@ -4,6 +4,7 @@
 DEMO_PROMPT="${PURPLE}(${GREEEN}bi${WHITE}|${RED}sect)${GREEN}➜ "
 clear
 
+cd ..
 pe "cat bisect/index.html"
 pe "git status"
 pe "git show 41ff7"
@@ -34,7 +35,6 @@ pe "git bisect bad"
 pe "git show 1ce2"
 git bisect reset
 
-cd ..
 p "${RED} git bisect reset"
 pe "ls"
 pe "cp bisect_test.sh ~/Desktop/"
