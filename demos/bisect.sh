@@ -31,6 +31,6 @@ pe "git bisect bad"
 pe "cat bisect/index.html"
 pe "git bisect good"
 pe "cat bisect/index.html"
-pe "git bisect good"
+pe "git bisect bad"
 pe "git show 1ce2"
 git bisect reset
