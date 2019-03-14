@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 . demo-magic.sh  # get your own at https://github.com/dzimine/demo-magic
 
-DEMO_PROMPT="${PURPLE}(bisect)${GREEN}➜ "
+DEMO_PROMPT="${PURPLE}(${GREEEN}bi|${RED}sect)${GREEN}➜ "
 clear
 
 cd ..
