@@ -23,13 +23,14 @@ git bisect reset
 
 p "${RED}git bisect reset"
 pe "git checkout master"
-pe "ls"
-pe "cp bisect_test.sh ~/Desktop/"
-pe "vim ~/Desktop/bisect_test.sh"
+pe "cat bisect/index.html"
 pe "git bisect start"
 pe "git bisect bad"
 pe "git bisect good 41ff7"
 pe "git log 180b09c..master --oneline"
+pe "ls"
+pe "cp bisect_test.sh ~/Desktop/"
+pe "vim ~/Desktop/bisect_test.sh"
 pe "git bisect run ~/Desktop/bisect_test.sh"
 
 git bisect reset
