@@ -35,7 +35,7 @@ All of the configuration is done with `git config` command and one of 3 flags:
 * `--global` just for you (`/home/%username%/.gitconfig`)
 * `--local` just for project (`.../project/.git/config`)
 
-In real life, however, only the `--global` and `--local` configurationes are useful.
+In real life, however, only the `--global` and `--local` configurations are useful.
 
 ### Aliases
 
@@ -210,6 +210,8 @@ What we would like to do is put refactoring chages in one commit and the feature
 
 
 ### Correcting Mistakes
+
+One awesome thing about 
 
 * http://sethrobertson.github.io/GitFixUm/fixup.html
 
