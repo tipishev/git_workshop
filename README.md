@@ -105,7 +105,7 @@ Notice that `git sta` is not autocorrected because it is ambiguous.
 
 ### Colors
 
-This configuration tip is usefule you work a lot in the command line mode. Any colored output in Git can be configured, for example:
+This configuration tip is useful you work a lot in the command line mode. Any colored output in Git can be configured, for example:
 
 ```
 git config --global color.diff.new "green normal reverse"

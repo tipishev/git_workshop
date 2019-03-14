@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 . demo-magic.sh  # get your own at https://github.com/dzimine/demo-magic
 
-DEMO_PROMPT="${PURPLE}(aliases)${GREEN}➜ ${CYAN}\W "
+DEMO_PROMPT="${PURPLE}(aliases)${GREEN}➜ "
 clear
 
 pe "sudo git config --system alias.co checkout"
