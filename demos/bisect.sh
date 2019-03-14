@@ -13,6 +13,7 @@ pe "git bisect start"
 pe "git bisect bad"
 pe "git bisect good 41ff7"
 pe "cat bisect/index.html"
+pe "git config --global alias.bs bisect"
 cmd
 pe "cat bisect/index.html"
 cmd
