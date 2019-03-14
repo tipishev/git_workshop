@@ -12,3 +12,4 @@ elif [[ $html == *"World"* ]]; then
 else
   exit $((CANNOT_TEST))
 fi
+echo '-------------'
