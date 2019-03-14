@@ -50,13 +50,7 @@ git config --local alias.pod "pull origin dev"
 ```
 
 * The first one allows any user on the host to type `git co` instead of `git checkout`
-
-_demonstrate_
-
 * The second command provides a colourful replacement for a rather verbose default output of `git log`
-
-_demonstrate_
-
 * The third command is specific to the Sportamore project where all the branches pull changes from `origin dev`
 
 As expected, each alias is written to one of the three configuration files:
@@ -71,10 +65,9 @@ less ~/sportamore/sportamore/.git/config
 
 If you use `git status` too often, you may want to look at [Sexy Bash Prompt](https://github.com/twolfson/sexy-bash-prompt)
 
-![Autocorrect](images/sexy-bash-prompt.png)
+![Sexy Bash Prompt](images/sexy-bash-prompt.png)
 
 It shows the currently checked out branch and an icon for unpushed/unpulled/uncommited changes.
-
 
 ### Autocorrect
 
