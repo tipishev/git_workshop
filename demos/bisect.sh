@@ -13,25 +13,25 @@ pe "git bisect start"
 pe "git bisect bad"
 pe "git bisect good 41ff7"
 pe "cat bisect/index.html"
-pe "git bisect bad"
+cmd
 pe "cat bisect/index.html"
-pe "git bisect good"
+cmd
 pe "cat bisect/index.html"
-pe "git bisect good"
+cmd
 pe "cat bisect/index.html"
-pe "git bisect good"
+cmd
 pe "cat bisect/index.html"
-pe "git bisect good"
+cmd
 pe "cat bisect/index.html"
-pe "git bisect bad"
+cmd
 pe "cat bisect/index.html"
-pe "git bisect good"
+cmd
 pe "cat bisect/index.html"
-pe "git bisect bad"
+cmd
 pe "cat bisect/index.html"
-pe "git bisect bad"
+cmd
 pe "cat bisect/index.html"
-pe "git bisect bad"
+cmd
 pe "git show 1ce2"
 git bisect reset
 
