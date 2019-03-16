@@ -10,13 +10,14 @@ pe "ls"
 pe "less ugly.xml"
 pe "less notes.docx"
 pe "sed -i 's/5.45/7.62/g' ugly.xml"
-p "${GREEN}change ${WHITE}notes.docx"
+p "${GREEN}change notes.docx"
 pe "git diff"
-
 pe "echo '*.xml binary' > .gitattributes"
 pe "echo '*.docx diff=word' >> .gitattributes"
-git config diff.word.textconv "pandoc -t markdown -s"
+pe "git config diff.word.textconv 'pandoc -t markdown -s'"
+pe "less .gitattributes"
 pe "git diff"
 
+rm .gitattributes
 git checkout -- ugly.xml
 git checkout -- notes.docx
