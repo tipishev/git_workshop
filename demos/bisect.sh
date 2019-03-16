@@ -21,6 +21,7 @@ pe "git bisect bad"
 
 git bisect reset
 
+pe "git show 1ce2"
 p "${RED}git bisect reset"
 pe "git checkout master"
 pe "cat bisect/index.html"

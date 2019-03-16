@@ -1,6 +1,6 @@
 # Introduction
 
-Hello and welcome to this workshop on less-known useful features of Git. Git is one tool that we as developers use each and every day, therefore it makes sense to become more efficient at using it. What I discovered, however that as with most advanced technologies, as soon as one learns the basics, the motivation to learn fades. The goal of this workshop is to explore less known features that can make working with Git more productive and fun.
+Hello and welcome to this workshop on less-known useful features of Git. Git is one tool that we as developers use each and every day, therefore it makes sense to become more efficient at using it. What I discovered, however, as soon as one learns the basics, the motivation to learn fades. Kind of like older people using smartphones, they know how to make calls, read SMS and it's enough. The goal of this workshop is to explore less known features that can make your day-to-day work with Git more productive and fun.
 
 If you have ever talked version control to non-developers, you know how difficult it is to convince them to use version control instead of saving file copies with increasingly cryptic names.
 
@@ -10,22 +10,21 @@ Even the basics of Git feel unnecessarily complicated, as if it were made by the
 
 ![Basic Gearshift](images/basic_gearshift.png)
 
-However if you want to see how deep the rabbit hole goes you can read the official Git bible, available for free at https://git-scm.com/book/
+One one hand, If you want to see how deep the rabbit hole goes you can read the official Git bible, available for free at https://git-scm.com/book/
 
 ![Pro Git](images/pro-git.png)
 
-This book covers almost all the useful features for both users and Git admins.
+This book covers almost all the useful features for both Git users and admins.
 
 ![Advanced](images/advanced.png)
 
-
-However, if you want to be a happier person, you can instead look at project Legit, it wraps the common branch workflow into just 7 commands
+On the other hand, if you want to be a happier person, you can instead look at project Legit, it wraps the common branch workflow into just 7 commands
 
 ![Legit](images/legit.png)
 
 So let's get started!
 
-## Configuration
+# Configuration
 
 The fastest and most rewarding trick is to configure your Git.
 
@@ -33,13 +32,13 @@ All of the configuration is done with `git config` command and one of 3 flags:
 
 * `--system` for all users (`/etc/gitconfig`)
 * `--global` just for you (`/home/%username%/.gitconfig`)
-* `--local` just for project (`.../project/.git/config`)
+* `--local` just for the current Git project (`.../project/.git/config`)
 
-In real life, however, only the `--global` and `--local` configurations are useful.
+In real life, however, only `--global` and `--local` configurations are useful.
 
-### Aliases
+## Aliases
 
-One of the most time-saving configurations is aliases. If you find yourself typing or tab-completing the same command every day and it's longer than 3 keystrokes, aliases are there for you.
+One of the most time-saving configurations is aliases. If you find yourself typing or tab-completing the same command every day and it's longer than 3 keystrokes, aliases come to the rescue.
 
 Here are 3 examples of such aliases:
 
@@ -61,7 +60,7 @@ less ~/.gitconfig
 less ~/sportamore/sportamore/.git/config
 ```
 
-### Aside: Sexy Bash Prompt
+## Aside: Sexy Bash Prompt
 
 If you use `git status` too often, you may want to look at [Sexy Bash Prompt](https://github.com/twolfson/sexy-bash-prompt)
 
@@ -69,7 +68,7 @@ If you use `git status` too often, you may want to look at [Sexy Bash Prompt](ht
 
 It shows the currently checked out branch and an icon for unpushed/unpulled/uncommited changes.
 
-### Autocorrect
+## Autocorrect
 
 ![Autocorrect](images/autocorrect.png)
 
@@ -103,7 +102,7 @@ git heckout
 
 Notice that `git sta` is not autocorrected because it is ambiguous.
 
-### Colors
+## Colors
 
 This configuration tip is useful you work a lot in the command line mode. Any colored output in Git can be configured, for example:
 
@@ -112,7 +111,7 @@ git config --global color.diff.new "green normal reverse"
 ```
 
 
-### Find bugs with git-bisect
+# Find bugs with git-bisect
 
 While you were on vacation someone created a bug. Instead of "Hello World!" the main page shows "¡Hola, mundo!".
 
@@ -155,7 +154,7 @@ Notes from documentation:
 * Automatically bisect a broken test
 
 
-### Binary files
+# Binary files
 
 Git is good at tracking changes in text files and for binary files it simply tells:
 
@@ -171,11 +170,12 @@ So, for Git all files are either textual with nice diffs or binary blobs that ca
 
 The real world, as usual, is not black and white. Some text files, are better to be treated as binary, for example auto-generated XML configuration. And some binaries are actually just text trapped inside a proprietory format, like Microsoft Word or Excel. Let's look at both scenarios.
 
-### When text should be treated as binary
-As one wiseman said "Some languages can be read by human, but not by machines, while others can be read by machines but not by humans. XML solves this problem by being readable to neither."
+## When text should be treated as binary
+
+> "Some languages can be read by human, but not by machines, while others can be read by machines but not by humans. XML solves this problem by being readable to neither."
 File `binary/ugly.xml` is a huge line of generated XML. When a single letter changes the diff shows the whole file. Good luck figuring out what has changed. Of course, we could prettify it and try to see the difference, but there is another way. We can tell Git to treat it as binary and not to bother showing the diff.
 
-### When binary should be treated as text
+## When binary should be treated as text
 
 ```
 sudo apt install pandoc
@@ -183,16 +183,29 @@ git config diff.word.textconv "pandoc -t markdown -s"
 git diff
 ```
 
-And voilà! The Word document diff shows as markdown. The same idea can be applied to many more binary formats if you have a way to turn it into meaningful text. A smart enoufh neural network could show the following diff:
 ```
---- A WW2 sailor is kissing a woman on Time Square
-+++ 11 men are having lunch on a girder over 1930s Manhattan
+# .gitattribute
+*.xml binary
+*.docs diff=word
 ```
 
-### Interactive Git
+And voilà! The Word document diff shows as markdown. Now, when you read `binary files differ` or see a huge and useless diff you know how to change that.
+
+
+# Git Hooks
+In almost any collaborative coding project there are rules. These rules can be about code style, commit message format, who can edit which files and so on. Many of these rules are so simple that a robot can do it. And it should. That's where Git hooks step in. There are 2 types of hooks:
+
+TODO diagram
+
+* Server Side
+* Client Side
+
+Can be bypassed with `--no-verify`
+
+# Interactive Git
 Many git commands are presented as all-or-nothing: you either commit the whole file or don't commit at all. Git is not like this, many of its commands have interactive mode, where git and you take turns in doing something.
 
-#### Patch-flag
+## Patch-flag
 Let's say that a file you were working has more than one logical change, for example refactoring and the actual feature.
 
 ```
@@ -201,24 +214,43 @@ git diff
 
 What we would like to do is put refactoring chages in one commit and the feature in the other.
 
+## Interactive Rebasing Exercise
 
-### Correcting Mistakes
 
-One awesome thing about 
+# Correcting Mistakes
+
+## Amend
+
+## Finding lost work
+
+The only 2 actions that may make you lose work are
+* hard-reset
+* checkout -- file
+
+One awesome thing about git is how forgiving it is until the moment you push your changes. 
+- 
 
 * http://sethrobertson.github.io/GitFixUm/fixup.html
 
+## Nuke big files/passwords
 
-#### Interactive Rebasing Exercise
+```
+git verify-pack -v .git/objects/pack/pack-*.idx |
+grep blob | sort -k3nr | head |
+while read s x b x; do
+  git rev-list --all --objects | grep $s |
+    awk '{print "'"$(numfmt --to=iec-i --suffix=B --padding=7 $b)"'",$0;}';
+    done
+```
 
 
-### Git Archaeology
+# Git Archeology
 
 https://jfire.io/blog/2012/03/07/code-archaeology-with-git/
 
 Often when reading code one can wonder who wrote this and what were they ~~smoking~~ thinking. Luckily, Git records a lot of history and we can do some archaeology to figure out why is the code the way it is. Let's see what is in our archeology toolbox.
 
-#### Git blame
+## Git blame
 
 The first tool is `git blame`. It shows the commit, author, and date for every line of code in a given file. As soon as we see the commit hash next to the line, we inspect this commit with
 
@@ -231,17 +263,9 @@ This way we see what was the intent of this commit and what else had changed at 
 - separate refactoring commits
 - alibi
 
-#### Git show
+## Git show
 
-### Git Hooks
-In almost any collaborative coding project there are rules. These rules can be about code style, commit message format, who can edit which files and so on. Many of these rules are so simple that a robot can do it. And it should. That's where Git hooks step in. There are 2 types of hooks:
 
-TODO diagram
-
-* Server Side
-* Client Side
-
-Can be bypassed with `--no-verify`
 
 
 ## Conclusion
@@ -288,10 +312,13 @@ Pro Git in Russian
 * commits path shortcuts ..., ^, HEAD
 * split refactoring and feature branches
   - drive-by refactoring
-* nuke big files
+
 * git tags
 * ignore whitespace
 * git stash
+  - basic stash only for few-minute switches
+  - name stash always `git stash save "Jim asked to fix FOO while I was doing BAR"`
+  - pop stash into a branch ?
 * delete branch locally and remotely
 * delete all merged branches
 * git log --pretty=oneline master
