@@ -157,6 +157,8 @@ Notes from documentation:
 Git users have 2 extreme approaches to pushing. The first one says that you should push your commits the way they are with all the swearing, commits that fix typos, drive-by refactoring, people don't care how the sausages are made as long as the end-product is tasty. The other approach is to spend time on post-production, so that commits look as if they were perfect from the start. As with most practical matters, you need to find a balance. Balance in this case is to put effort only where people actually look, that is Pull Requests.
 
 ## Separate Branch for refactoring
+![Drive-By Refactoring](images/drive-by.png)
+* drive-by
 ## Post-review ... commits
 Imagine a situation. Yesterday you have reviewed a Pull Request and today your colleague has pushed changes
 
@@ -271,6 +273,8 @@ https://jfire.io/blog/2012/03/07/code-archaeology-with-git/
 
 Often when reading code one can wonder who wrote this and what were they ~~smoking~~ thinking. Luckily, Git records a lot of history and we can do some archaeology to figure out why is the code the way it is. Let's see what is in our archeology toolbox.
 
+## Git grep
+
 ## Git blame
 
 The first tool is `git blame`. It shows the commit, author, and date for every line of code in a given file. As soon as we see the commit hash next to the line, we inspect this commit with
@@ -284,7 +288,7 @@ This way we see what was the intent of this commit and what else had changed at 
 - separate refactoring commits
 - alibi
 
-## Git show
+## Pickaxe
 
 
 
@@ -318,25 +322,11 @@ Pro Git in Russian
 * time-based revision references  `git diff HEAD@{'2 months ago'}`
 * ancestry path
 * git log --stat  # to see changed files
-* git grep
-* git replace
-* git log -S
-* git blame + keys
-* git hooks
-* github tricks, e.g. #FIX %issue #% in PR name
+* git replace `git grep -l $1 | xargs sed -i 's/$1/$2/g'`
 * git checkout/merge -
 * git commit/checkout -p
 * git short diff
-* rebase
-* reflog plumbing
-* templates + template dir
-* git show
 * commits path shortcuts ..., ^, HEAD
-* split refactoring and feature branches
-  - drive-by refactoring
-
-* git tags
-* ignore whitespace
 * git stash
   - basic stash only for few-minute switches
   - name stash always `git stash save "Jim asked to fix FOO while I was doing BAR"`
@@ -345,12 +335,3 @@ Pro Git in Russian
 * delete all merged branches
 * git log --pretty=oneline master
 * https://devhints.io/git-log-format git log --pretty=format:"%ad - %an: %s %H" --after="2019-02-25" --until="2019-02-27"
-* garbage collect, GIT_TRACE_PERFORMANCE
-* nuke accidental password
-
-
-
-* stash
-  - git config --global alias.stash-rename '!_() { rev=$(git rev-parse $1) && git stash drop $1 || exit 1 ; git stash store -m "$2" $rev; }; _'
-
-
