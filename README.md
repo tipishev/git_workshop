@@ -274,10 +274,14 @@ https://jfire.io/blog/2012/03/07/code-archaeology-with-git/
 Often when reading code one can wonder who wrote this and what were they ~~smoking~~ thinking. Luckily, Git records a lot of history and we can do some archaeology to figure out why is the code the way it is. Let's see what is in our archeology toolbox.
 
 ## Git grep
+The first tool to use when looking for usages in the current codebase is `git-grep`. It is better than the default `grep` because it's faster and has useful flags.
+
+_archeology.sh_
+
 
 ## Git blame
 
-The first tool is `git blame`. It shows the commit, author, and date for every line of code in a given file. As soon as we see the commit hash next to the line, we inspect this commit with
+When it comes to code archeology, `git blame` (known as Annotate to JetBrains IDE users) is the first tool. It shows the commit, author, and date for every line of code in a given file. As soon as we see the commit hash next to the line, we inspect this commit with
 
 ```
 git show {commit hash}  # TODO use actual example
