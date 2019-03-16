@@ -5,5 +5,8 @@ DEMO_PROMPT="${PURPLE}(${BROWN}b${PURPLE}'${CYAN}1${PURPLE}n${CYAN}a${PURPLE}ry'
 clear
 
 cd ../binary
-pe "ls -a"
-pe "less "
+rm .gitattributes  # will be re-created as the result
+pe "ls"
+pe "less ugly.xml"
+pe "less notes.docx"
+
