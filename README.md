@@ -198,6 +198,20 @@ git diff
 
 And voilà! The Word document diff shows as markdown. Now, when you read `binary files differ` or see a huge and useless diff you know how to change that.
 
+## Filters, Smudge, and Clean
+![Smudge](images/smudge.png)
+![Clean](images/clean.png)
+
+```
+*.py filter=pep8
+git config --global filter.pep8.clean flake8
+git config --global filter.pep8.smudge cat
+```
+
+* store Word documents as Markdown
+* lint on `add`
+* transparent encryption  https://gist.github.com/shadowhand/873637
+
 
 # Git Hooks
 In almost any collaborative coding project there are rules. These rules can be about code style, commit message format, who can edit which files and so on. Many of these rules are so simple that a robot can do it. And it should. That's where Git hooks step in. There are 2 types of hooks:
@@ -300,7 +314,6 @@ Pro Git in Russian
 # Ideas pool
 
 * TRENCHES!!!
-* transparent encryption  https://gist.github.com/shadowhand/873637
 * squash
 * time-based revision references  `git diff HEAD@{'2 months ago'}`
 * ancestry path
