@@ -5,11 +5,11 @@ DEMO_PROMPT="${PURPLE}(${BROWN}b${PURPLE}'${CYAN}1${PURPLE}n${CYAN}a${PURPLE}ry'
 clear
 
 cd ../binary
-rm .gitattributes  # will be re-created as the result
+rm -f .gitattributes  # will be re-created as the result
 pe "ls"
 pe "less ugly.xml"
 pe "less notes.docx"
-pe "sed -i 's/5.45/7.62' ugly.xml"
+pe "sed -i 's/5.45/7.62/g' ugly.xml"
 p "${CYAN}change ${GREEN}notes.docx"
 pe "git diff"
 
