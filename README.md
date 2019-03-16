@@ -196,7 +196,7 @@ git diff
 ```
 # .gitattribute
 *.xml binary
-*.docs diff=word
+*.docx diff=word
 ```
 
 And voilà! The Word document diff shows as markdown. Now, when you read `binary files differ` or see a huge and useless diff you know how to change that.
