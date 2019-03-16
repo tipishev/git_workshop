@@ -206,7 +206,7 @@ And voilà! The Word document diff shows as markdown. Now, when you read `binary
 
 ```
 *.py filter=pep8
-git config --global filter.pep8.clean flake8
+git config --global filter.pep8.clean autopep8
 git config --global filter.pep8.smudge cat
 ```
 
