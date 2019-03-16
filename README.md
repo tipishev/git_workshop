@@ -159,6 +159,8 @@ Git users have 2 extreme approaches to pushing. The first one says that you shou
 ## Separate Branch for refactoring
 ![Drive-By Refactoring](images/drive-by.png)
 * drive-by
+## Patch-flag
+Let's say that a file you were working has more than one logical change, for example refactoring and the actual feature.
 ## Post-review ... commits
 Imagine a situation. Yesterday you have reviewed a Pull Request and today your colleague has pushed changes
 
@@ -225,11 +227,6 @@ In almost any collaborative coding project there are rules. These rules can be a
 
 Can be bypassed with `--no-verify`
 
-# Interactive Git
-Many git commands are presented as all-or-nothing: you either commit the whole file or don't commit at all. Git is not like this, many of its commands have interactive mode, where git and you take turns in doing something.
-
-## Patch-flag
-Let's say that a file you were working has more than one logical change, for example refactoring and the actual feature.
 
 ```
 git diff
@@ -276,7 +273,7 @@ Often when reading code one can wonder who wrote this and what were they ~~smoki
 ## Git grep
 The first tool to use when looking for usages in the current codebase is `git-grep`. It is better than the default `grep` because it's faster and has useful flags.
 
-_archeology.sh_
+_grep.sh_
 
 
 ## Git blame
@@ -284,20 +281,42 @@ _archeology.sh_
 When it comes to code archeology, `git blame` (known as Annotate to JetBrains IDE users) is the first tool. It shows the commit, author, and date for every line of code in a given file. As soon as we see the commit hash next to the line, we inspect this commit with
 
 ```
-git show {commit hash}  # TODO use actual example
+git show {commit hash}
 ```
 
-This way we see what was the intent of this commit and what else had changed at the same time.
-
-- separate refactoring commits
-- alibi
+This way we see what was the intent of this commit and what else had changed at the same time. Often we hit refactoring commits, so that's why it's important to clearly write in the commit message that this commit is refactoring.
 
 ## Pickaxe
+Pickaxe is another name for `git log -S {string}` that searches for all occurences of a string across the whole history. The usual flow is to look for string and then explore individual commits on why did they include this string.
 
+_archeology.sh_
 
+# Miscellaneous Tips
+* switch to previous branch with `-`, also works with `merge`
+* delete already merged branches
 
+```bash
+git checkout master
+git branch --merged
+git branch --no-merged
+git branch --merged | xargs git branch -d
+```
 
-## Conclusion
+* See what's shaking with `git for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'`
+* instantaneously checkout file from another revision/branch with `--`
+```
+git checkout feature/SPORT-625 -- manage.py
+git checkout 34201f7dab8 -- manage.py
+git checkout -p  592a12ed1e^ -- sportamor/site/apiviews/base.py
+```
+* search ref-log
+```
+git log -g
+```
+
+# Conclusion
+
+I hope that this talk showed you some topics that are interesting to you.
 
 Pro Git in Russian
 
