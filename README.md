@@ -184,6 +184,7 @@ The real world, as usual, is not black and white. Some text files, are better to
 ## When text should be treated as binary
 
 > "Some languages can be read by human, but not by machines, while others can be read by machines but not by humans. XML solves this problem by being readable to neither."
+
 File `binary/ugly.xml` is a huge line of generated XML. When a single letter changes the diff shows the whole file. Good luck figuring out what has changed. Of course, we could prettify it and try to see the difference, but there is another way. We can tell Git to treat it as binary and not to bother showing the diff.
 
 ## When binary should be treated as text
@@ -216,7 +217,6 @@ git config --global filter.pep8.smudge cat
 * lint on `add`
 * transparent encryption  https://gist.github.com/shadowhand/873637
 
-
 # Git Hooks
 In almost any collaborative coding project there are rules. These rules can be about code style, commit message format, who can edit which files and so on. Many of these rules are so simple that a robot can do it. And it should. That's where Git hooks step in. There are 2 types of hooks:
 
@@ -228,14 +228,7 @@ In almost any collaborative coding project there are rules. These rules can be a
 Can be bypassed with `--no-verify`
 
 
-```
-git diff
-```
-
-What we would like to do is put refactoring chages in one commit and the feature in the other.
-
 ## Interactive Rebasing Exercise
-
 
 # Correcting Mistakes
 
@@ -285,6 +278,13 @@ git show {commit hash}
 ```
 
 This way we see what was the intent of this commit and what else had changed at the same time. Often we hit refactoring commits, so that's why it's important to clearly write in the commit message that this commit is refactoring.
+
+Useful flags
+```bash
+$ git blame -w  # ignores white space
+$ git blame -M  # ignores moving text
+$ git blame -C  # ignores moving text into other files
+```
 
 ## Pickaxe
 Pickaxe is another name for `git log -S {string}` that searches for all occurences of a string across the whole history. The usual flow is to look for string and then explore individual commits on why did they include this string.
