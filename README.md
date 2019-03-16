@@ -319,6 +319,12 @@ git log -g
 git diff --word-diff
 ```
 
+* auto-rebase
+```
+git config branch.dev.rebase true
+git config --global branch.autosetuprebase always
+```
+
 # Conclusion
 
 I hope that this talk showed you some topics that are interesting to you.
