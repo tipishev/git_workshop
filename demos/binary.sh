@@ -14,5 +14,6 @@ p "${GREEN}change ${WHITE}notes.docx"
 pe "git diff"
 
 # restore just in case
+sed -i 's/7.62/5.45/g' ugly.xml
 # echo "*.xml binary" > .gitattributes
 # echo "*.docx diff=word" >> .gitattributes
