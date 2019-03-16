@@ -11,7 +11,6 @@ changed_python_files = [filename for filename in changed_files
 for python_file in changed_python_files:
     with open(python_file) as f:
         for line_number, line in enumerate(f.readlines(), start=1):
-            print(line)
             if 'FIXME' in line:
                 print(f"{python_file}:{line_number}: {line}\n"
                        "Fix it, wouldn't ya?")
