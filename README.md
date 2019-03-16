@@ -110,7 +110,6 @@ This configuration tip is useful you work a lot in the command line mode. Any co
 git config --global color.diff.new "green normal reverse"
 ```
 
-
 # Find bugs with git-bisect
 
 While you were on vacation someone created a bug. Instead of "Hello World!" the main page shows "¡Hola, mundo!".
@@ -160,8 +159,6 @@ Git users have 2 extreme approaches to pushing. The first one says that you shou
 ## Separate Branch for refactoring
 ## Post-review ... commits
 Imagine a situation. Yesterday you have reviewed a Pull Request and today your colleague has pushed changes
-
-
 
 
 # Binary files
