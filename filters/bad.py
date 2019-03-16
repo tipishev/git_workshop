@@ -7,9 +7,9 @@ class A:
 class B:
     pass
 def foo(bar = 123, baz = 456):
-    return add(
-                bar,
-    baz)
+    return add(       bar,
+    baz              )
 
+            
 
 
