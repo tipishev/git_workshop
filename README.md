@@ -299,6 +299,8 @@ Pro Git in Russian
 
 # Ideas pool
 
+* TRENCHES!!!
+* transparent encryption  https://gist.github.com/shadowhand/873637
 * squash
 * time-based revision references  `git diff HEAD@{'2 months ago'}`
 * ancestry path
