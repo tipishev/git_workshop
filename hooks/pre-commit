@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+1/0
+
 import sys
 import subprocess
 
