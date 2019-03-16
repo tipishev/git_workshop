@@ -27,7 +27,7 @@ pe "git checkout master"
 pe "cat bisect/index.html"
 
 pe "ls"
-pe "cp bisect_test.sh ~/Desktop/"
+pe "cp bisect/bisect_test.sh ~/Desktop/"
 
 pe "git bisect start"
 pe "git bisect bad"
