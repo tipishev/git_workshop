@@ -168,13 +168,9 @@ One of my sins is that my pull requests contain both the payload and refactoring
 
 ## Patch-flag
 If separating refactoring and feature intent sounds like an overkill to you, you can separate the changes on commit-level with `-p` flag.
+Let's say that a file you were working has more than one logical change, for example refactoring and the actual feature.
 
 _demo/patch.sh__
-
-Let's say that a file you were working has more than one logical change, for example refactoring and the actual feature.
-## Post-review ... commits
-Imagine a situation. Yesterday you have reviewed a Pull Request and today your colleague has pushed changes
-
 
 # Binary files
 
@@ -325,6 +321,9 @@ git checkout -p  592a12ed1e^ -- sportamor/site/apiviews/base.py
 git log -g
 ```
 
+* git-stash
+  - name stash always `git stash save "Jim asked to fix FOO while I was doing BAR"`
+
 * word-diff
 ```
 git diff --word-diff
@@ -336,6 +335,8 @@ git config branch.dev.rebase true
 git config --global branch.autosetuprebase always
 ```
 
+* git replace `git grep -l $1 | xargs sed -i 's/$1/$2/g'`
+
 # Conclusion
 
 I hope that this talk showed you some topics that are interesting to you.
@@ -344,12 +345,6 @@ Pro Git in Russian
 
 * https://git-scm.com/book/ru/v2
 * Git tips and tricks
-
----
-
-# Illustrations
-
-* https://xkcd.com/1597/ use for introduction?
 
 ---
 
@@ -365,16 +360,10 @@ Pro Git in Russian
 * time-based revision references  `git diff HEAD@{'2 months ago'}`
 * ancestry path
 * git log --stat  # to see changed files
-* git replace `git grep -l $1 | xargs sed -i 's/$1/$2/g'`
-* git checkout/merge -
-* git commit/checkout -p
-* git short diff
 * commits path shortcuts ..., ^, HEAD
 * git stash
   - basic stash only for few-minute switches
   - name stash always `git stash save "Jim asked to fix FOO while I was doing BAR"`
   - pop stash into a branch ?
 * delete branch locally and remotely
-* delete all merged branches
-* git log --pretty=oneline master
 * https://devhints.io/git-log-format git log --pretty=format:"%ad - %an: %s %H" --after="2019-02-25" --until="2019-02-27"
