@@ -154,12 +154,23 @@ Notes from documentation:
 
 
 # Sausage Making
-Git users have 2 extreme approaches to pushing. The first one says that you should push your commits the way they are with all the swearing, commits that fix typos, drive-by refactoring, people don't care how the sausages are made as long as the end-product is tasty. The other approach is to spend time on post-production, so that commits look as if they were perfect from the start. As with most practical matters, you need to find a balance. Balance in this case is to put effort only where people actually look, that is Pull Requests.
+Git users have 2 extreme approaches to pushing. The first one says that you should push your commits the way they are with all the swearing, commits that fix typos, drive-by refactoring, people don't care how the sausages are made as long as they are tasty. The other approach is to spend time on post-production, so that commits look as if they were perfect from the start. As with most practical matters, you need to find a balance. Balance in this case is to put effort only where people actually look, that is Pull Requests.
 
 ## Separate Branch for refactoring
 ![Drive-By Refactoring](images/drive-by.png)
-* drive-by
+
+One of my sins is that my pull requests contain both the payload and refactoring. I found a good solution to create 2 branches and 2 Pull Requests
+
+* `feature/XXX-666-refactoring` -> `dev`
+* `feature/XXX-666` -> `feature/XXX-666-refactoring`
+
+![Trident](images/trident.png)
+
 ## Patch-flag
+If separating refactoring and feature intent sounds like an overkill to you, you can separate the changes on commit-level with `-p` flag.
+
+_demo/patch.sh__
+
 Let's say that a file you were working has more than one logical change, for example refactoring and the actual feature.
 ## Post-review ... commits
 Imagine a situation. Yesterday you have reviewed a Pull Request and today your colleague has pushed changes
@@ -350,7 +361,6 @@ Pro Git in Russian
 
 # Ideas pool
 
-* TRENCHES!!!
 * squash
 * time-based revision references  `git diff HEAD@{'2 months ago'}`
 * ancestry path
