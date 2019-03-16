@@ -26,7 +26,7 @@ p "${RED}git bisect reset"
 pe "git checkout master"
 pe "cat bisect/index.html"
 
-pe "ls"
+pe "ls bisect/"
 pe "cp bisect/bisect_test.sh ~/Desktop/"
 
 pe "git bisect start"
