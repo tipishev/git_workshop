@@ -309,8 +309,7 @@ Pro Git in Russian
 ---
 
 # Reading list
-
-* http://sethrobertson.github.io/GitBestPractices/  # MUST READ
+* https://git-scm.com/docs/gitattributes
 * https://opensource.com/article/18/4/git-tips
   - 6. A nicer force-push: `git push --force-with-lease`
 * short commands description in Pro Git appendix
