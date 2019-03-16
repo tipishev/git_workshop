@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 
-1/0
 
 import sys
 import subprocess
 
-changed_files = subprocess.check_output(
-    ['git', 'diff-index', '--cached', '--name-only', 'HEAD']).split()
-changed_python_files = [str(filename) for filename in changed_files
+changed_files = [str(f) for f in subprocess.check_output(
+    ['git', 'diff-index', '--cached', '--name-only', 'HEAD']).split()]
+changed_python_files = [filename for filename in changed_files
                        if filename.endswith('.py')]
 
 for python_file in changed_python_files:
