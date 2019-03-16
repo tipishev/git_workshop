@@ -10,6 +10,7 @@ cd hooks
 pe "ls"
 pe "vim code.py"
 pe "git commit -p"
+pe "vim pre-commit"
 pe "ln pre-commit ../.git/hooks/pre-commit"
 pe "git commit -p"
 pe "vim code.py"
