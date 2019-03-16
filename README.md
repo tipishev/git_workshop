@@ -195,10 +195,10 @@ And voilà! The Word document diff shows as markdown. Now, when you read `binary
 # Git Hooks
 In almost any collaborative coding project there are rules. These rules can be about code style, commit message format, who can edit which files and so on. Many of these rules are so simple that a robot can do it. And it should. That's where Git hooks step in. There are 2 types of hooks:
 
-TODO diagram
+* Server Side - are actually enforced
+* Client Side - in client's control
 
-* Server Side
-* Client Side
+![Git Hooks](images/git-hooks.png)
 
 Can be bypassed with `--no-verify`
 
@@ -244,7 +244,7 @@ while read s x b x; do
 ```
 
 
-# Git Archeology
+# Archeology
 
 https://jfire.io/blog/2012/03/07/code-archaeology-with-git/
 
@@ -295,7 +295,7 @@ Pro Git in Russian
 * squash
 * time-based revision references  `git diff HEAD@{'2 months ago'}`
 * ancestry path
-* git log --stat
+* git log --stat  # to see changed files
 * git grep
 * git replace
 * git log -S
