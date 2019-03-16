@@ -309,9 +309,14 @@ git checkout feature/SPORT-625 -- manage.py
 git checkout 34201f7dab8 -- manage.py
 git checkout -p  592a12ed1e^ -- sportamor/site/apiviews/base.py
 ```
-* search ref-log
+* search ref-log with
 ```
 git log -g
+```
+
+* word-diff
+```
+git diff --word-diff
 ```
 
 # Conclusion
