@@ -10,9 +10,9 @@ pe "ls"
 pe "less ugly.xml"
 pe "less notes.docx"
 pe "sed -i 's/5.45/7.62/g' ugly.xml"
-p "${CYAN}change ${GREEN}notes.docx"
+p "${GREEN}change ${WHITE}notes.docx"
 pe "git diff"
 
 # restore just in case
-echo "*.xml binary" > .gitattributes
-echo "*.docx diff=word" >> .gitattributes
+# echo "*.xml binary" > .gitattributes
+# echo "*.docx diff=word" >> .gitattributes
