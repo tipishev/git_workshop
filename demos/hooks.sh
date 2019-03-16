@@ -41,7 +41,7 @@ pe "git commit -p"
 p "$OKAY"
 pe "vim code.py"
 pe "git commit -p"
-pe "git commit -p --no-verify"  # to ignore hooks
+p "git commit -p --no-verify  # to ignore hooks"
 
 # cleanup
 git checkout -- code.py
