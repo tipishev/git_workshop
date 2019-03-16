@@ -17,3 +17,4 @@ pe "git add bad.py"
 pe "git diff --staged"
 
 rm -f .gitattributes  # will be re-created as the result
+git reset HEAD -- bad.py
