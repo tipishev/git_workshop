@@ -13,7 +13,10 @@ pe "sed -i 's/5.45/7.62/g' ugly.xml"
 p "${GREEN}change ${WHITE}notes.docx"
 pe "git diff"
 
-# restore just in case
-sed -i 's/7.62/5.45/g' ugly.xml
-# echo "*.xml binary" > .gitattributes
-# echo "*.docx diff=word" >> .gitattributes
+pe "echo '*.xml binary' > .gitattributes"
+pe "echo '*.docx diff=word' >> .gitattributes"
+git config diff.word.textconv "pandoc -t markdown -s"
+pe "git diff"
+
+git checkout -- ugly.xml
+git checkout -- notes.docx
