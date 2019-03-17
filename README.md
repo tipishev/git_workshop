@@ -112,6 +112,8 @@ git config --global color.diff.new "green normal reverse"
 
 # Find bugs with git-bisect
 
+![Binary-Search](images/binary-search.png)
+
 While you were on vacation someone created a bug. Instead of "Hello World!" the main page shows "¡Hola, mundo!".
 
 Like with many things in Git, you only need a few subcommands to work.  They are

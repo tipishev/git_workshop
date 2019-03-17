@@ -31,44 +31,50 @@ class: center, middle
   - feature ➔ dev ➔ master
 
 ---
-# Naive Version Control
-
-![Naive Version Control](images/naive_version_control.png)
+# Naïve Version Control
+![Naïve Version Control](images/naive_version_control.png)
 
 ???
 
 * selling version control to non-developers
 
 ---
-# Is Complexity Needed?
+# Do we need this complexity?
 
-![Basic Gearshift](images/basic_gearshift.png)
+.image-70[![Advanced](images/advanced.png)]
 
 ???
 
-* As if it were the same guy who made Linux 
+* as if it were the same guy who made Linux 
+
+---
+# Maybe Not...
+
+.image-50[![Basic Gearshift](images/basic_gearshift.png)]
+
+--
+
+```bash
+git help everyday
+```
+
+
+???
+
+* after all only a handful of commands is used
 
 ---
 
-# Maybe Not... (Le·git)
+# Le·git ([git-legit.org](http://www.git-legit.org/))
 
 ![Legit](images/legit.png)
+
+
 
 ???
 
 * Kenneth Reitz, creator of the main Python web-lib
 * Just 7 commands
-
----
-
-# Yiessss!...
-
-![Advanced](images/advanced.png)
-
-
-???
-
-* Maybe you are sick bastards
 
 ---
 
@@ -92,14 +98,7 @@ class: center, middle
 ---
 
 # Examples
-
 * Aliases
-* Autocorrect
-* Colors
-
-???
-
-demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
 
 ---
 
@@ -107,12 +106,54 @@ demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
 
 ![Sexy Bash Prompt](images/sexy-bash-prompt.png)
 
+---
+# Examples
+* Aliases
+
+--
+
+* Autocorrect
+
+--
+
+* Colors
+
 ???
 
-* if you want to see the current branch, and status
+demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
 
+???
+
+---
+# Other Configuration Tips
+
+* Always rebase on pull
+
+`git config --global pull.rebase true`
+
+* See all configs values*
+
+ `git config --list`
+
+--
+
+.footnote[\* you may be surprised]
 
 ---
 
 # Bisect
+
+![Binary-Search](images/binary-search.png)
+
+???
+
+`bisect.sh`
+
+---
+
+# Bisect Ideas
+
+* (.fastdev-green[old], .fastdev-red[new]) == (.fastdev-green[good], .fastdev-red[bad])
+* Mark more than one good commit
+* Auto-Bisect broken test on CI-server 
 
