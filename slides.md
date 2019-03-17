@@ -41,7 +41,7 @@ class: center, middle
 ---
 # Do we need this complexity?
 
-.image-70[![Advanced](images/advanced.png)]
+.center.image-50[![Advanced](images/advanced.png)]
 
 ???
 
@@ -50,7 +50,7 @@ class: center, middle
 ---
 # Maybe Not...
 
-.image-50[![Basic Gearshift](images/basic_gearshift.png)]
+.center.image-50[![Basic Gearshift](images/basic_gearshift.png)]
 
 --
 
@@ -77,10 +77,9 @@ git help everyday
 * Just 7 commands
 
 ---
-
 # Pro-git
 
-![Pro Git](images/pro-git.png)
+.center.middle.image-50[![Pro Git](images/pro-git.png)]
 
 ???
 
@@ -94,6 +93,9 @@ git help everyday
 * .fastdev-red[`--system`] for all users
 * .fastdev-red[`--global`] just for you
 * .fastdev-red[`--local`] for the project
+--
+
+* ~~.fastdev-red[`--emperror`] FOR THE EMPEROR!~~
 
 ---
 
@@ -154,6 +156,72 @@ demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
 # Bisect Ideas
 
 * (.fastdev-green[old], .fastdev-red[new]) == (.fastdev-green[good], .fastdev-red[bad])
-* Mark more than one good commit
-* Auto-Bisect broken test on CI-server 
+* Mark >1 good commit
+* Bisect broken test on CI
 
+---
+
+# Archeology
+
+## `git-grep`
+
+* faster than `grep`
+* useful flags
+  - `--count`
+  - `--line-number`
+  - `--show-function`
+
+---
+
+##  Blame
+
+`git blame`
+
+* the starting point
+* blames refactorer
+* ignore-flags
+	- .fastdev-red[`-w`]  white space
+	- .fastdev-red[`-M`]  moving within file
+	- .fastdev-red[`-C`]  moving between files
+
+---
+
+## Pickaxe
+
+`git log -S {string}`
+
+.fastdev-red[The ultimate code-digging tool  across the whole history]
+
+---
+
+# Realism vs Perfection
+* aka Sausage Making
+
+--
+
+* Realism
+  - better for historians
+
+* Perfection
+  - what will people say?
+
+---
+
+# Tools
+* separate branches
+* separate commits (`-p`)
+* interactive rebasing
+
+???
+
+show patching demo
+
+---
+![Drive-By Refactoring](images/drive-by.png)
+---
+# Refactoring Branch
+
+* `feature/XXX-666-refactoring` -> `dev`
+* `feature/XXX-666` -> `feature/XXX-666-refactoring`
+
+![Trident](images/trident.png)
