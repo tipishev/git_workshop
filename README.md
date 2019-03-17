@@ -1,6 +1,6 @@
 # Introduction
 
-Hello and welcome to this workshop on less-known useful features of Git. Git is one tool that we as developers use each and every day, therefore it makes sense to become more efficient at using it. What I discovered, however, as soon as one learns the basics, the motivation to learn fades. Kind of like older people using smartphones, they know how to make calls, read SMS and it's enough. The goal of this workshop is to explore less known features that can make your day-to-day work with Git more productive and fun.
+Hello and welcome to this workshop on less-known useful features of Git. Git is one tool that we as developers use each and every day, therefore it makes sense to become efficient at using it. What I discovered, however, as soon as one learns the basics, the motivation to learn fades. It's like moving to a new city, at first you explore it, but then you get caught into your home-work-supermarket routine. Today I will be your guide, so seat back and enjoy the ride. he goal of this workshop is to explore less known corners of Git that can make your day-to-day work with Git more productive and fun.
 
 If you have ever talked version control to non-developers, you know how difficult it is to convince them to use version control instead of saving file copies with increasingly cryptic names.
 
