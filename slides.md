@@ -61,17 +61,28 @@ class: center, middle
 
 ---
 
-# YESsss!... (Pro-git)
+# Yiessss!...
+
+![Advanced](images/advanced.png)
+
+
+???
+
+* Maybe you are sick bastards
+
+---
+
+# Pro-git
 
 ![Pro Git](images/pro-git.png)
 
 ???
 
-* Kenneth Reitz
-* Just 7 commands
-
+* available in all human languages
+* that's where most of the tricks come from
 
 ---
+
 # Configuration
 
 * .fastdev-red[`--system`] for all users
@@ -79,3 +90,29 @@ class: center, middle
 * .fastdev-red[`--local`] for the project
 
 ---
+
+# Examples
+
+* Aliases
+* Autocorrect
+* Colors
+
+???
+
+demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
+
+---
+
+# Aside: Sexy Bash Prompt
+
+![Sexy Bash Prompt](images/sexy-bash-prompt.png)
+
+???
+
+* if you want to see the current branch, and status
+
+
+---
+
+# Bisect
+
