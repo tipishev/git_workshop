@@ -36,10 +36,39 @@ class: center, middle
 ![Naive Version Control](images/naive_version_control.png)
 
 ???
+
 * selling version control to non-developers
 
+---
+# Is Complexity Needed?
 
+![Basic Gearshift](images/basic_gearshift.png)
 
+???
+
+* As if it were the same guy who made Linux 
+
+---
+
+# Maybe Not... (Le·git)
+
+![Legit](images/legit.png)
+
+???
+
+* Kenneth Reitz, creator of the main Python web-lib
+* Just 7 commands
+
+---
+
+# YESsss!... (Pro-git)
+
+![Pro Git](images/pro-git.png)
+
+???
+
+* Kenneth Reitz
+* Just 7 commands
 
 
 ---
