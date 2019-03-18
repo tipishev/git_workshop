@@ -171,6 +171,12 @@ demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
   - `--line-number`
   - `--show-function`
 
+???
+
+* what were they thinking
+*  
+
+
 ---
 
 ##  Blame
@@ -225,3 +231,51 @@ show patching demo
 * `feature/XXX-666` -> `feature/XXX-666-refactoring`
 
 ![Trident](images/trident.png)
+
+---
+# Filters
+
+## Smudge
+![Smudge](images/smudge.png)
+* on Checkout
+
+---
+# Filters
+
+## Clean
+![Clean](images/clean.png)
+* on Add
+
+???
+
+* demo `filters.sh`
+
+---
+
+# Filters: diff images
+
+```bash
+*.png diff=exif
+git config diff.exif.textconv exiftool
+diff --git a/image.png b/image.png
+```
+
+.small[```
+index 88839c4..4afcb7c 100644
+--- a/image.png
++++ b/image.png
+@@ -1,12 +1,12 @@
+ ExifTool Version Number         : 7.74
+-File Size                       : 70 kB
+-File Modification Date/Time     : 2009:04:21 07:02:45-07:00
++File Size                       : 94 kB
++File Modification Date/Time     : 2009:04:21 07:02:43-07:00
+ File Type                       : PNG
+ MIME Type                       : image/png
+-Image Width                     : 1058
+-Image Height                    : 889
++Image Width                     : 1056
++Image Height                    : 827
+ Bit Depth                       : 8
+ Color Type                      : RGB with Alpha
+```]
