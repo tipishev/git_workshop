@@ -45,7 +45,7 @@ class: center, middle
 
 ???
 
-* as if it were the same guy who made Linux 
+* as if it were the same guy who made Linux
 
 ---
 # Maybe Not...
@@ -95,7 +95,7 @@ git help everyday
 * .fastdev-red[`--local`] for the project
 --
 
-* ~~.fastdev-red[`--emperror`] FOR THE EMPEROR!~~
+* ~~.fastdev-red[`--emperor`] FOR THE EMPRAH!~~
 
 ---
 
@@ -122,9 +122,9 @@ git help everyday
 
 ???
 
-demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
-
-???
+* `aliases.sh`
+* `autocorrect.sh`
+* `colors.sh`
 
 ---
 # Other Configuration Tips
@@ -141,23 +141,32 @@ demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
 
 .footnote[\* you may be surprised]
 
+
 ---
+# Git Hooks
 
-# Bisect
+* Enforce rules
 
-![Binary-Search](images/binary-search.png)
+* Trigger actions
+
+--
+
+* Server Side - are actually enforced
+
+* Client Side - in client's control*
+
+--
+
+.footnote[\* Can be bypassed with `--no-verify`]
+
+---
+# Git Hooks
+
+![Git Hooks](images/git-hooks.png)
 
 ???
 
-`bisect.sh`
-
----
-
-# Bisect Ideas
-
-* (.fastdev-green[old], .fastdev-red[new]) == (.fastdev-green[good], .fastdev-red[bad])
-* Mark >1 good commit
-* Bisect broken test on CI
+* `hooks.sh`
 
 ---
 
@@ -174,7 +183,7 @@ demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
 ???
 
 * what were they thinking
-*  
+* happens all the time with running projects
 
 
 ---
@@ -186,9 +195,9 @@ demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
 * the starting point
 * blames refactorer
 * ignore-flags
-	- .fastdev-red[`-w`]  white space
-	- .fastdev-red[`-M`]  moving within file
-	- .fastdev-red[`-C`]  moving between files
+  - .fastdev-red[`-w`]  white space
+  - .fastdev-red[`-M`]  moving within file
+  - .fastdev-red[`-C`]  moving between files
 
 ---
 
@@ -214,13 +223,17 @@ demo `aliases.sh`, `autocorrect.sh`, `colors.sh`
 ---
 
 # Tools
-* separate branches
 * separate commits (`-p`)
+* separate branches
 * interactive rebasing
+
+--
+
+.fastdev-green[\> asuming not pushed yet]
 
 ???
 
-show patching demo
+* run `patch.sh`
 
 ---
 ![Drive-By Refactoring](images/drive-by.png)
@@ -231,20 +244,85 @@ show patching demo
 * `feature/XXX-666` -> `feature/XXX-666-refactoring`
 
 ![Trident](images/trident.png)
+---
+# Interactive Rebasing
+
+* `git commit --amend` on steroids
+* a range of unpushed commits
+* pretend to be perfect
+
+???
+
+* amend: change message, content
+* `rebasing.sh`
+
+---
+
+# Bisect
+
+![Binary-Search](images/binary-search.png)
+
+???
+
+`bisect.sh`
+
+---
+
+# Bisect Ideas
+
+* (.fastdev-green[old], .fastdev-red[new]) == (.fastdev-green[good], .fastdev-red[bad])
+* Mark >1 good commit
+* Bisect broken test on CI
+
+---
+
+# Git Attributes
+
+* tell Git how to treat files
+* Like `gitconfig`:
+  - `system`
+  - `global`
+  - `local`
+
+---
+
+# Git Worldview
+* Text Files
+* Binary Files
+
+.small[
+```
+diff --git a/binary/notes.docx b/binary/notes.docx
+index 638f1d4..9934c87 100644
+Binary files a/binary/notes.docx and b/binary/notes.docx differ
+```
+]
+
+---
+# Binary Deception
+
+.center.image-50[![Binary Deception](images/deception.png)]
+
+* some .fastdev-red[XML] is as good as binary
+* some .fastdev-green[binaries] are just text
+
+???
+
+* real world not white and black
+* `.gitattributes` helps git
+* `binary.sh`
 
 ---
 # Filters
 
-## Smudge
+## Smudge (on `checkout`)
 ![Smudge](images/smudge.png)
-* on Checkout
 
 ---
 # Filters
 
-## Clean
+## Clean (on `add`)
 ![Clean](images/clean.png)
-* on Add
 
 ???
 
@@ -252,7 +330,7 @@ show patching demo
 
 ---
 
-# Filters: diff images
+# Filters: Diff Images
 
 ```bash
 *.png diff=exif
@@ -279,3 +357,42 @@ index 88839c4..4afcb7c 100644
  Bit Depth                       : 8
  Color Type                      : RGB with Alpha
 ```]
+
+---
+# Filters: Mask Markdown As Word
+
+* smudge: markdown to Word
+* clean: Word to markdown
+
+---
+# Filters: Transparent Encryption
+
+* smudge: decrypt
+* clean: encrypt
+
+.small.fastdev-light-gray[https://gist.github.com/shadowhand/873637]
+
+---
+# Miscellaneous Tips
+
+* switch to previous branch with `-`, also works with `merge`
+* `git stash save "Jim asked to fix FOO while I was doing BAR"`
+* See what's shaking with `git for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'`
+
+---
+# Miscellaneous Tips
+* insta-checkout file from another revision/branch with `--`
+* git replace `git grep -l $1 | xargs sed -i 's/$1/$2/g'`
+
+
+---
+
+# Conclusion
+
+* download Pro Git (it's free!)
+
+.center.middle.image-50[![Pro Git](images/pro-git.png)]
+
+---
+
+# Questions

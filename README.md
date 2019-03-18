@@ -273,7 +273,7 @@ git commit -am 'formatting'
 echo "¡Hola, mundo!" > hello.txt
 git commit -am 'translate to Spanish'
 # assuming no pushes
-git rebase -i HEAD^^^^^  # better ref
+git rebase -i HEAD~5
 ```
 
 ## DROPPED: Finding lost work
