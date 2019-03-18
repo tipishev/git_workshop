@@ -244,13 +244,39 @@ In almost any collaborative coding project there are rules. These rules can be a
 Can be bypassed with `--no-verify`
 
 
-## Interactive Rebasing Exercise
-
 # Correcting Mistakes
 
 ## Amend
 
-## Finding lost work
+* complete control over the most recent commit
+  - change message
+  - change content
+
+
+## Interactive Rebase
+
+```bash
+cd ~/Desktop
+mkdir rebasing-exercise
+cd rebasing-exercise
+git init
+echo "hello" > hello.txt
+git commit -am 'initial commit'
+echo "#TODO add world" >> hello.txt
+git commit -am 'add implementation notes'
+echo "hello wrold" > hello.txt
+git commit -am 'implement hello world'
+echo "hello world" > hello.txt
+git commit -am 'typo'
+echo "Hello World!" > hello.txt
+git commit -am 'formatting'
+echo "¡Hola, mundo!" > hello.txt
+git commit -am 'translate to Spanish'
+# assuming no pushes
+git rebase -i HEAD^^^^^  # better ref
+```
+
+## DROPPED: Finding lost work
 
 The only 2 actions that may make you lose work are
 * hard-reset
@@ -261,7 +287,7 @@ One awesome thing about git is how forgiving it is until the moment you push you
 
 * http://sethrobertson.github.io/GitFixUm/fixup.html
 
-## Nuke big files/passwords
+## DROPPED: Nuke big files/passwords
 
 ```
 git verify-pack -v .git/objects/pack/pack-*.idx |
@@ -376,3 +402,14 @@ Pro Git in Russian
   - pop stash into a branch ?
 * delete branch locally and remotely
 * https://devhints.io/git-log-format git log --pretty=format:"%ad - %an: %s %H" --after="2019-02-25" --until="2019-02-27"
+
+# from Gmail
+Git whatchanged
+https://github.com/git-tips/tips/blob/master/README.md#find-out-branches-containing-commit-hash
+Stash untracked
+Stash all
+Fixup, autosquash
+https://github.com/git-tips/tips/blob/master/README.md#remove-entry-in-the-global-config
+https://github.com/git-tips/tips/blob/master/README.md#remove-entry-in-the-global-config
+https://github.com/git-tips/tips/blob/master/README.md#logs-between-date-range
+https://github.com/git-tips/tips/blob/master/README.md#logs-between-date-range
