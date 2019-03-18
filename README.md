@@ -196,6 +196,10 @@ The real world, as usual, is not black and white. Some text files, are better to
 
 File `binary/ugly.xml` is a huge line of generated XML. When a single letter changes the diff shows the whole file. Good luck figuring out what has changed. Of course, we could prettify it and try to see the difference, but there is another way. We can tell Git to treat it as binary and not to bother showing the diff.
 
+## other ways to confront
+* git diff --word-diff
+* add a filter for saving formatted
+
 ## When binary should be treated as text
 
 ```
@@ -223,8 +227,11 @@ git config --global filter.pep8.smudge cat
 ```
 
 * store Word documents as Markdown
+* Add meta-attributes to checked-out file
+  - $ident$
 * lint on `add`
-* transparent encryption  https://gist.github.com/shadowhand/873637
+  * filters are assumed to be nice-addons, add `required` attribute otherwise
+    - transparent encryption  https://gist.github.com/shadowhand/873637
 
 # Git Hooks
 In almost any collaborative coding project there are rules. These rules can be about code style, commit message format, who can edit which files and so on. Many of these rules are so simple that a robot can do it. And it should. That's where Git hooks step in. There are 2 types of hooks:
