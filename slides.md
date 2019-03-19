@@ -381,11 +381,15 @@ index 88839c4..4afcb7c 100644
 ---
 # Filters: Mask Markdown As Word
 
+![Word](images/word.png)
+
 * smudge: markdown to Word
 * clean: Word to markdown
 
 ---
 # Filters: Transparent Encryption
+
+![Tinfoil](images/tinfoil.png)
 
 * smudge: decrypt
 * clean: encrypt
@@ -394,21 +398,44 @@ index 88839c4..4afcb7c 100644
 
 ---
 # Miscellaneous Tips
-* switch to previous branch with `-`, also works with `merge`
-* `git stash save "Jim asked to fix FOO while I was doing BAR"`
-* See what's shaking with `git for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'`
+* The power of `-`
+  - `git checkout -`
+  - `git merge -`
+
+* Git Stash
+  - `git stash save "Jim asked to fix FOO while I was doing BAR"`
+  - `git stash list`
+  - `git stash pop`
+
+* See what's shaking with
+
+`git for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'`
 
 ---
 # Miscellaneous Tips (continued)
-* insta-checkout file from another revision/branch with `--`
-* git replace `git grep -l $1 | xargs sed -i 's/$1/$2/g'`
+
+* insta-checkout file from another branch with
+
+`git checkout <branch> -- filename`
+
+* git replace
+
+`git grep -l $1 | xargs sed -i 's/$1/$2/g'`
 
 ---
-# Conclusion
+# ~~Conclusion~~ Call to Action
+
+* create a couple of aliases
+
+--
+
+* write a `pre-push` hook
+
+--
 
 * download Pro Git (it's free!)
 
-.center.middle.image-50[![Pro Git](images/pro-git.png)]
+.center.middle.image-30[![Pro Git](images/pro-git.png)]
 
 ---
 class: center, middle
