@@ -2,7 +2,9 @@ name: title
 class: center, middle
 # Practical Git tips and tricks
 
-.footnote[![Fastdev](images/fastdev.png)]
+.fastdev-gray[tipishev/git_workshop]
+
+.right.footnote[![Fastdev](images/fastdev.png)]
 
 ---
 
