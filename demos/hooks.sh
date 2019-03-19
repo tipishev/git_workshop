@@ -38,7 +38,11 @@ pe "git commit -p"
 pe "vim no_python_FIXME.py"
 pe "ln no_python_FIXME.py ../.git/hooks/pre-commit"
 pe "git commit -p"
+
+TYPE_SPEED=5000
 p "$OKAY"
+TYPE_SPEED=50
+
 pe "vim code.py"
 pe "git commit -p"
 p "git commit -p --no-verify  # to ignore hooks"
