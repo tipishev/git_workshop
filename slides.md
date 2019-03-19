@@ -36,7 +36,7 @@ class: center, middle
 
 ???
 
-* selling version control to non-developers
+* explain version control to non-developers
 
 ---
 # Do we need this complexity?
@@ -97,6 +97,11 @@ git help everyday
 
 * ~~.fastdev-red[`--emperor`] FOR THE EMPRAH!~~
 
+
+???
+
+* Easy and rewarding
+
 ---
 
 # Examples
@@ -122,9 +127,9 @@ git help everyday
 
 ???
 
-* `aliases.sh`
-* `autocorrect.sh`
-* `colors.sh`
+* aliases.sh
+* autocorrect.sh
+* colors.sh
 
 ---
 # Other Configuration Tips
@@ -151,9 +156,11 @@ git help everyday
 
 --
 
-* Server Side - are actually enforced
+----
 
-* Client Side - in client's control*
+* Remote - enforced
+
+* Local - optional*
 
 --
 
@@ -166,7 +173,7 @@ git help everyday
 
 ???
 
-* `hooks.sh`
+* hooks.sh
 
 ---
 
@@ -182,9 +189,9 @@ git help everyday
 
 ???
 
-* what were they thinking
+* refactoring
+* what were they ~~smoking~~ thinking
 * happens all the time with running projects
-
 
 ---
 
@@ -193,11 +200,16 @@ git help everyday
 `git blame`
 
 * the starting point
-* blames refactorer
+* likely to blame refactorer
 * ignore-flags
   - .fastdev-red[`-w`]  white space
   - .fastdev-red[`-M`]  moving within file
   - .fastdev-red[`-C`]  moving between files
+
+???
+
+* JetBrains IDE as "Annotate"
+* Shows the author, commit hash, timestamp
 
 ---
 
@@ -218,7 +230,14 @@ git help everyday
   - better for historians
 
 * Perfection
-  - what will people say?
+  - easier to read
+
+???
+
+* google it
+* commit often
+* perfect later
+* publish once
 
 ---
 
@@ -233,7 +252,8 @@ git help everyday
 
 ???
 
-* run `patch.sh`
+* Git is forgiving until push
+* patch.sh
 
 ---
 ![Drive-By Refactoring](images/drive-by.png)
@@ -253,8 +273,8 @@ git help everyday
 
 ???
 
-* amend: change message, content
-* `rebasing.sh`
+* amend: rewrite the latest commit
+* rebasing.sh
 
 ---
 
@@ -264,7 +284,7 @@ git help everyday
 
 ???
 
-`bisect.sh`
+bisect.sh
 
 ---
 
@@ -309,8 +329,8 @@ Binary files a/binary/notes.docx and b/binary/notes.docx differ
 ???
 
 * real world not white and black
-* `.gitattributes` helps git
-* `binary.sh`
+* .gitattributes tells Git how to treat files
+* binary.sh
 
 ---
 # Filters
@@ -326,7 +346,7 @@ Binary files a/binary/notes.docx and b/binary/notes.docx differ
 
 ???
 
-* demo `filters.sh`
+* filters.sh
 
 ---
 
@@ -374,19 +394,16 @@ index 88839c4..4afcb7c 100644
 
 ---
 # Miscellaneous Tips
-
 * switch to previous branch with `-`, also works with `merge`
 * `git stash save "Jim asked to fix FOO while I was doing BAR"`
 * See what's shaking with `git for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)'`
 
 ---
-# Miscellaneous Tips
+# Miscellaneous Tips (continued)
 * insta-checkout file from another revision/branch with `--`
 * git replace `git grep -l $1 | xargs sed -i 's/$1/$2/g'`
 
-
 ---
-
 # Conclusion
 
 * download Pro Git (it's free!)
@@ -394,5 +411,6 @@ index 88839c4..4afcb7c 100644
 .center.middle.image-50[![Pro Git](images/pro-git.png)]
 
 ---
+class: center, middle
 
-# Questions
+# ¿Questions?
