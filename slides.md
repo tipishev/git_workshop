@@ -7,7 +7,6 @@ class: center, middle
 .right.footnote[![Fastdev](images/fastdev.png)]
 
 ---
-
 # Motivation
 * refresh memory
 * rekindle interest in Git
@@ -60,18 +59,14 @@ class: center, middle
 git help everyday
 ```
 
-
 ???
 
 * after all only a handful of commands is used
 
 ---
-
 # Le·git ([git-legit.org](http://www.git-legit.org/))
 
 ![Legit](images/legit.png)
-
-
 
 ???
 
@@ -99,18 +94,15 @@ git help everyday
 
 * ~~.fastdev-red[`--emperor`] FOR THE EMPRAH!~~
 
-
 ???
 
 * Easy and rewarding
 
 ---
-
 # Examples
 * Aliases
 
 ---
-
 # Aside: Sexy Bash Prompt
 
 ![Sexy Bash Prompt](images/sexy-bash-prompt.png)
@@ -178,7 +170,6 @@ git help everyday
 * hooks.sh
 
 ---
-
 # Archeology
 
 ## `git-grep`
@@ -196,7 +187,6 @@ git help everyday
 * happens all the time with running projects
 
 ---
-
 ##  Blame
 
 `git blame`
@@ -214,7 +204,6 @@ git help everyday
 * Shows the author, commit hash, timestamp
 
 ---
-
 ## Pickaxe
 
 `git log -S {string}`
@@ -222,7 +211,6 @@ git help everyday
 .fastdev-red[The ultimate code-digging tool  across the whole history]
 
 ---
-
 # Realism vs Perfection
 * aka Sausage Making
 
@@ -242,7 +230,6 @@ git help everyday
 * publish once
 
 ---
-
 # Tools
 * separate commits (`-p`)
 * separate branches
@@ -279,7 +266,6 @@ git help everyday
 * rebasing.sh
 
 ---
-
 # Bisect
 
 ![Binary-Search](images/binary-search.png)
@@ -289,7 +275,6 @@ git help everyday
 bisect.sh
 
 ---
-
 # Bisect Ideas
 
 * (.fastdev-green[old], .fastdev-red[new]) == (.fastdev-green[good], .fastdev-red[bad])
@@ -297,7 +282,6 @@ bisect.sh
 * Bisect broken test on CI
 
 ---
-
 # Git Attributes
 
 * tell Git how to treat files
@@ -351,7 +335,6 @@ Binary files a/binary/notes.docx and b/binary/notes.docx differ
 * filters.sh
 
 ---
-
 # Filters: Diff Images
 
 ```bash
