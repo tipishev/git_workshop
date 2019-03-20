@@ -109,6 +109,10 @@ git help everyday
 # Examples
 * Aliases
 
+???
+
+* aliases.sh
+
 ---
 # Aside: Sexy Bash Prompt
 
@@ -116,9 +120,8 @@ git help everyday
 
 ---
 # Examples
-* Aliases
 
---
+* Aliases
 
 * Autocorrect
 
@@ -128,9 +131,10 @@ git help everyday
 
 ???
 
-* aliases.sh
-* autocorrect.sh
-* colors.sh
+* the next immediately useful feature
+  - autocorrect.sh
+* aesthetics
+  - colors.sh
 
 ---
 # Other Configuration Tips
