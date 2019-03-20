@@ -320,7 +320,7 @@ Binary files a/binary/notes.docx and b/binary/notes.docx differ
 
 .center.image-50[![Binary Deception](images/deception.png)]
 
-* some .fastdev-red[XML] is as good as binary
+* some .fastdev-red[text] is as good as binary
 * some .fastdev-green[binaries] are just text
 
 ???
@@ -421,11 +421,11 @@ index 88839c4..4afcb7c 100644
 ---
 # ~~Conclusion~~ Call to Action
 
-* create a couple of aliases
+* a couple of aliases
 
 --
 
-* write a `pre-push` hook
+* make and share a `pre-push` hook
 
 --
 
@@ -437,3 +437,7 @@ index 88839c4..4afcb7c 100644
 class: center, middle
 
 # ¿Questions?
+
+???
+
+Now we still have time left, so I can answer your questions.
