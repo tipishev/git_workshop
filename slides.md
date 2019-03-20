@@ -389,6 +389,7 @@ index 88839c4..4afcb7c 100644
 
 * smudge: decrypt
 * clean: encrypt
+* .fastdev-red[required] keyword
 
 .small.fastdev-light-gray[https://gist.github.com/shadowhand/873637]
 
