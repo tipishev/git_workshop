@@ -16,6 +16,8 @@ class: center, middle
 
 * use it every day
 * new city metaphor
+  - at first you try to explore every bit and corner
+  - but then gradually set into work-supermarket-home routine
 * hidden corners
 * productive and fun
 
@@ -31,6 +33,10 @@ class: center, middle
   - Github + Teamcity
   - feature ➔ dev ➔ master
 
+???
+
+* this detail explains why my examples pull dev instead of master
+
 ---
 # Naïve Version Control
 ![Naïve Version Control](images/naive_version_control.png)
@@ -38,6 +44,7 @@ class: center, middle
 ???
 
 * explain version control to non-developers
+* they are baffled by its complexity
 
 ---
 # Do we need this complexity?
