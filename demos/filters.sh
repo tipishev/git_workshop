@@ -8,7 +8,7 @@ cd ../filters
 rm -f .gitattributes  # will be re-created as the result
 
 pe "ls -a"
-pe "vim bad.py"  # change it to trigger git
+pe "vim bad.py  # change it to trigger git"
 pe "echo '*.py filter=pep8' > .gitattributes"
 pe "git config --global filter.pep8.clean 'autopep8 -'"
 pe "git config --global filter.pep8.smudge cat"
