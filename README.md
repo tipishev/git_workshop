@@ -60,6 +60,12 @@ less ~/.gitconfig
 less ~/sportamore/sportamore/.git/config
 ```
 
+```bash
+git config --global alias.whatsup "for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) %(authorname)'"
+git fetch
+git whatsup | head
+```
+
 ## Aside: Sexy Bash Prompt
 
 If you use `git status` too often, you may want to look at [Sexy Bash Prompt](https://github.com/twolfson/sexy-bash-prompt)
