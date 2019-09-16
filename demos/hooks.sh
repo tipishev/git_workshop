@@ -29,8 +29,9 @@ OKAY=$(cat <<-END
 END
 )
 
-cd ..
+cd ..  # to repository root
 rm -f .git/hooks/pre-commit
+mkdir -p .git/hooks  # could be missing
 cd hooks
 pe "ls"
 pe "vim code.py  # don't forget to change it!"
