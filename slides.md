@@ -26,12 +26,9 @@ class: center, middle
 .footnote[\* myself included]
 
 ---
-# Who I am and what I do
-* Python/Django backender
-* .sportamore-pink[Sportamore]
-  - 20 devs in 3 teams
-  - Github + Teamcity
-  - feature ➔ dev ➔ master
+# Sportamore Setup
+- Github + Teamcity
+- feature ➔ dev ➔ master
 
 ???
 

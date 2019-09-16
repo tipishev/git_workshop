@@ -33,7 +33,7 @@ cd ..
 rm -f .git/hooks/pre-commit
 cd hooks
 pe "ls"
-pe "vim code.py"
+pe "vim code.py  # don't forget to change it!"
 pe "git commit -p"
 pe "vim no_python_FIXME.py"
 pe "ln no_python_FIXME.py ../.git/hooks/pre-commit"
