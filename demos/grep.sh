@@ -5,8 +5,8 @@ DEMO_PROMPT="${PURPLE}(grep)${GREEN}➜ "
 clear
 
 pe "cd ~/sportamore/sportamore"
-pe "grep -r udarocc *"
-pe "git grep udarocc"
+pe "time(grep -r udarocc *)"
+pe "time(git grep udarocc)"
 pe "git grep --count udarocc"  # or -c
 pe "git grep --line-number udarocc"  # or -n
 pe "git grep --show-function udarocc"  # or -p
