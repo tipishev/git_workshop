@@ -5,7 +5,6 @@ DEMO_PROMPT="${PURPLE}(aliases)${GREEN}➜ "
 clear
 
 pe "cd ~/sportamore/sportamore"
-pe "git pod"
 pe "git checkout playground"
 pe "vim sport/models/supplier.py"
 pe "git commit -p"
