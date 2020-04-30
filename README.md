@@ -248,7 +248,7 @@ In almost any collaborative coding project there are rules. These rules can be a
 ![Git Hooks](images/git-hooks.png)
 
 Can be bypassed with `--no-verify`
-
+A good way to avoid committing sensitive info: add hook to disallow `#FIXME`
 
 # Correcting Mistakes
 
