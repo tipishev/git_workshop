@@ -378,6 +378,8 @@ git config --global branch.autosetuprebase always
 
 * git replace `git grep -l $1 | xargs sed -i 's/$1/$2/g'`
 
+* follow file changes `git log --follow -p -- index.html`
+
 # Conclusion
 
 I hope that this talk showed you some topics that are interesting to you.
