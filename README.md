@@ -237,7 +237,7 @@ git config --global filter.pep8.smudge cat
   - $ident$
 * lint on `add`
   * filters are assumed to be nice-addons, add `required` attribute otherwise
-    - transparent encryption  https://gist.github.com/shadowhand/873637
+    - [transparent encryption](https://gist.github.com/sandeepraju/4934282f5f87c83ddd93)
 
 # Git Hooks
 In almost any collaborative coding project there are rules. These rules can be about code style, commit message format, who can edit which files and so on. Many of these rules are so simple that a robot can do it. And it should. That's where Git hooks step in. There are 2 types of hooks:
