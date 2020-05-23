@@ -14,4 +14,4 @@ for python_file in changed_python_files:
             if 'FIXME' in line:
                 print(f"{python_file}:{line_number}: {line}\n"
                       "Fix it, wouldn't ya?")
-                sys.exit(1)
+                sys.exit(1)  # to tell git that it ain't good
