@@ -161,7 +161,7 @@ Notes from documentation:
 * Automatically bisect a broken test
 
 
-# Sausage Making
+# [Sausage Making](https://sethrobertson.github.io/GitBestPractices/#sausage)
 Git users have 2 extreme approaches to pushing. The first one says that you should push your commits the way they are with all the swearing, commits that fix typos, drive-by refactoring, people don't care how the sausages are made as long as they are tasty. The other approach is to spend time on post-production, so that commits look as if they were perfect from the start. As with most practical matters, you need to find a balance. Balance in this case is to put effort only where people actually look, that is Pull Requests.
 
 ## Separate Branch for refactoring
